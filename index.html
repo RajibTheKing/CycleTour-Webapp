@@ -11,7 +11,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+	<script src="https://unpkg.com/leaflet-routing-machine@3.2.7/dist/leaflet-routing-machine.js"></script>
 
 
 	<style>
@@ -208,6 +209,21 @@
 		smoothFactor: 1
 	});
 	firstpolyline.addTo(map);
+
+
+	var router = L.routing.osrmv1()
+
+	router.route([
+			L.routing.waypoint([54.30490637204568,10.171966552734375]),
+			L.routing.waypoint([54.322818512961135, 10.143492221832275])
+		], function(err, routes) {
+				if (err || routes.length < 1) {
+				return console.error(err)
+			}
+	
+			var line = L.routing.line(routes[0]).addTo(map)
+			map.fitBounds(line.getBounds())
+		})
 
 
 </script>
