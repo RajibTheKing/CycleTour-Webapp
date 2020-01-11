@@ -1,0 +1,33 @@
+
+Download GeoData (Ready):
+http://opendatalab.de/projects/geojson-utilities/
+
+
+
+Generate GeoData:
+http://geojson.io/#map=13/54.3347/10.1396
+
+
+
+Map:
+https://www.openstreetmap.org/
+
+
+Rendering Map:
+http://leaflet.github.io/
+
+
+Graphhoper Key to call Openstreetmap API (Signed Up already!!):
+https://graphhopper.com/dashboard/#/api-keys
+
+
+
+Json Code Beautifier:
+https://codebeautify.org/jsonviewer
+
+
+
+
+Example work:
+https://hiking.waymarkedtrails.org/#?map=10!54.1349!10.6934
+
