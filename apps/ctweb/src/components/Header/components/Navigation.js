@@ -40,23 +40,13 @@ class Navigation extends React.Component{
                         <NavLink to="/" className="nav-link">Home</NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <NavLink to="/help" className="nav-link">Help</NavLink>
+                        <NavLink to="/map" className="nav-link">Tour Map</NavLink>
                     </NavItem>
-                    {
-                        userAuth.isLogedIn?
-                        <NavItem className="nav-item">
-                            <NavLink to="/profile" className="nav-link">Profile</NavLink>
-                        </NavItem>
-                        :''
-                    }
-                    <NavItem className="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                        {
-                            userAuth.isLogedIn?
-                              <NavLink to="/" onClick={this.theLogoutHandle} className="btn btn-primary">Logout</NavLink>
-                            : <NavLink to="/login" className="btn btn-primary">Login</NavLink>
-                        }
+                    
+                    <NavItem className="nav-item">
+                        <NavLink to="/about" className="nav-link">About Us</NavLink>
+                    </NavItem>
                         
-                    </NavItem>
                 </Nav>
             </div>
         )

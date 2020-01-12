@@ -4,15 +4,10 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 
-
-import './css/tether.min.css'
-import './css/bootstrap.min.css'
-import './css/bootstrap-select.min.css'
-import './css/winter-flat.css'
-import './css/custom.css'
-import './css/custom_template_style.css'
-import './css/palette.css'
-
+import './css/nouislider.css';
+import './css/swiper.min.css';
+import './css/style.css';
+import './css/custom.css';
 import App from './App';
 import fkReducer from './reducers/index'
 

@@ -5,7 +5,7 @@ import { Map, TileLayer, withLeaflet, MapControl, Popup, Marker } from "react-le
 import Routing from "./components/Routing";
 import areaData from './components/areaData'
 
-class Help extends React.Component {
+class TourMap extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -47,4 +47,4 @@ class Help extends React.Component {
   }
 }
 
-export default Help;
+export default TourMap;

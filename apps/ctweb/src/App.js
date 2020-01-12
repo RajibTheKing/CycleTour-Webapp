@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header/index';
 import Footer from './components/Footer';
 import Home from './pages/Home/index'
-import Help from './pages/Help/index'
+import TourMap from './pages/TourMap/index'
 import Bikes from './pages/Bikes/index'
 import BikeSingle from './pages/BikeSingle/index';
 import Profile from './pages/Users/Components/Profile'
@@ -21,7 +21,7 @@ function App() {
 				<Header />
 				<Route exact path="/" component={Home} />
 				<Route path="/bikes" component={Bikes} />
-				<Route path="/Help" component={Help} />
+				<Route path="/map" component={TourMap} />
 				<Route path="/bike/:id" component={BikeSingle} />
 				<Route path="/login" component={Login} />
 				<Route path="/register" component={Register} />
