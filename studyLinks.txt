@@ -31,3 +31,12 @@ https://codebeautify.org/jsonviewer
 Example work:
 https://hiking.waymarkedtrails.org/#?map=10!54.1349!10.6934
 
+
+
+
+Routing Leaflet:
+http://www.liedman.net/leaflet-routing-machine/api/#l-routing-control
+https://routing.openstreetmap.de/?z=12&center=54.344450%2C10.179520&loc=54.359127%2C10.125664&loc=54.313446%2C10.131014&hl=en&alt=0&srv=1
+
+
+

@@ -1,234 +1,271 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	
+
 	<title>Custom Icons Tutorial - Leaflet</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-	<script src="https://unpkg.com/leaflet-routing-machine@3.2.7/dist/leaflet-routing-machine.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
+	<!-- <script src="https://unpkg.com/leaflet-routing-machine@3.2.7/dist/leaflet-routing-machine.js"></script> -->
+	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
 
 
 	<style>
-		html, body {
+		html,
+		body {
 			height: 100%;
 			margin: 0;
 		}
+
 		#map {
 			height: 900px;
 		}
 	</style>
 
-	
+
 </head>
+
 <body>
 
-<div id='map'></div>
+	<div id='map'></div>
 
-<script type="text/javascript" src="eu-countries.js"></script>
+	<script type="text/javascript" src="eu-countries.js"></script>
 
-<script>
+	<script>
 
-	var map = L.map('map');
+		var map = L.map('map');
 
-	map.createPane('labels');
+		map.createPane('labels');
 
-	// This pane is above markers but below popups
-	map.getPane('labels').style.zIndex = 200;
+		// This pane is above markers but below popups
+		map.getPane('labels').style.zIndex = 200;
 
-	// Layers in this pane are non-interactive and do not obscure mouse/touch events
-	map.getPane('labels').style.pointerEvents = 'none';
+		// Layers in this pane are non-interactive and do not obscure mouse/touch events
+		map.getPane('labels').style.pointerEvents = 'none';
 
-	var cartodbAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>';
+		var cartodbAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>';
 
-	var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-		attribution: cartodbAttribution
-	}).addTo(map);
+		var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+			attribution: cartodbAttribution
+		}).addTo(map);
 
-	var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
-		attribution: cartodbAttribution,
-		pane: 'labels'
-	}).addTo(map);
+		var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
+			attribution: cartodbAttribution,
+			pane: 'labels'
+		}).addTo(map);
 
-	geojson = L.geoJson(germanyGeodata).addTo(map);
+		geojson = L.geoJson(germanyGeodata).addTo(map);
 
-	geojson.eachLayer(function (layer) {
-		layer.bindPopup(layer.feature.properties.name);
-	});
-	
-	console.log(germanyGeodata);
-          
-	map.setView([54.32313137415068, 10.139522552490234], 12);
-	
-	var leafletIcon = L.icon({
-		iconUrl: 'docs/images/favicon.ico',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-	
-	var meuseumIcon = L.icon({
-		iconUrl: 'docs/images/museum_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-	
-	
-	var universityIcon = L.icon({
-		iconUrl: 'docs/images/university_cau_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
+		geojson.eachLayer(function (layer) {
+			layer.bindPopup(layer.feature.properties.name);
+		});
 
-	var churchIcon = L.icon({
-		iconUrl: 'docs/images/church_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
+		console.log(germanyGeodata);
 
-	var gardenIcon = L.icon({
-		iconUrl: 'docs/images/garden_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
+		map.setView([54.32313137415068, 10.139522552490234], 12);
 
-	var militaryIcon = L.icon({
-		iconUrl: 'docs/images/military_base_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
+		var leafletIcon = L.icon({
+			iconUrl: 'docs/images/favicon.ico',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
 
-	var parkIcon = L.icon({
-		iconUrl: 'docs/images/park_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-
-	var restaurantIcon = L.icon({
-		iconUrl: 'docs/images/restaurant_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-
-	var sailingShipIcon = L.icon({
-		iconUrl: 'docs/images/sailing_ship_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-
-	var aquariumIcon = L.icon({
-		iconUrl: 'docs/images/aquarium_icon.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-
-	var shoppingMall = L.icon({
-		iconUrl: 'docs/images/shopingmall.png',
-		iconSize:     [24, 24], // size of the icon
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-	});
-	
-	
-	//Kiel Maritime Museum
-	L.marker([54.322818512961135, 10.143492221832275], {icon: meuseumIcon}).addTo(map);
-	
-	//Kiel University
-	L.marker([54.338740125896415,10.12313961982727], {icon: universityIcon}).addTo(map);
-	//Osteekai
-	L.marker([54.32585942288542,10.146474838256834], {icon: sailingShipIcon}).addTo(map);
-	//Aquarium GEOMAR
-	L.marker([54.33015760960474,10.148320198059082], {icon: aquariumIcon}).addTo(map);
-	//Kiel Botanical Garden
-	L.marker([54.347264569183544,10.116734504699707], {icon: gardenIcon}).addTo(map);
-	//Sophienhof Kiel
-	L.marker([54.31642936707444,10.130724906921387], {icon: shoppingMall}).addTo(map);
-	//Machinery Museum
-	L.marker([54.364445673222306,10.138546228408813], {icon: meuseumIcon}).addTo(map);
-	//Tannenberg park
-	L.marker([54.364258145372155,10.115532875061035], {icon: parkIcon}).addTo(map);
-	//Schrevenpark
-	L.marker([54.32836206075709,10.12488842010498], {icon: parkIcon}).addTo(map);
-	//Citti-Park Kiel
-	L.marker([54.313318914476056,10.099525451660156], {icon: shoppingMall}).addTo(map);
-	//Kiel Opera House
-	L.marker([54.323100088138816,10.133031606674193], {icon: meuseumIcon}).addTo(map);
-	
-	//St. Nikolai church
-	L.marker([54.32285605642953,10.140037536621094], {icon: churchIcon}).addTo(map);
-	//St.-Johannes-Kirche
-	L.marker([54.313655317821514,10.141231119632721], {icon: churchIcon}).addTo(map);
-	//Werftpark
-	L.marker([54.31512137843212,10.156946182250977], {icon: parkIcon}).addTo(map);
-	//Kath. Pfarramt St. Nikolaus
-	L.marker([54.322680853283906,10.13189435005188], {icon: churchIcon}).addTo(map);
-	//St. Jürgen
-	L.marker([54.31221736985766,10.123246908187864], {icon: churchIcon}).addTo(map);
-	//Kiel University of Applied Sciences
-	L.marker([54.33226587177493,10.179734230041504], {icon: universityIcon}).addTo(map);
-	//Tröndelsee
-	L.marker([54.30490637204568,10.171966552734375], {icon: sailingShipIcon}).addTo(map);
-
-	
-	
-	
-	var lineString = [[
-            10.140187740325928,
-            54.32318143172021
-          ],
-          [
-            10.142505168914795,
-            54.32223658481965
-          ],
-          [
-            10.144200325012207,
-            54.32437028109334
-          ],
-          [
-            10.144844055175781,
-            54.32597204486173
-          ],
-          [
-            10.146431922912596,
-            54.32592199068811
-          ]];
-		  
-	var pointList = []
-	lineString.map(x => pointList.push(new L.LatLng(x[1], x[0])))
-	
-	console.log(pointList);
-
-	var firstpolyline = new L.Polyline(pointList, {
-		color: 'red',
-		weight: 3,
-		opacity: 0.5,
-		smoothFactor: 1
-	});
-	firstpolyline.addTo(map);
+		var meuseumIcon = L.icon({
+			iconUrl: 'docs/images/museum_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
 
 
-	var router = L.routing.osrmv1()
+		var universityIcon = L.icon({
+			iconUrl: 'docs/images/university_cau_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
 
-	router.route([
-			L.routing.waypoint([54.30490637204568,10.171966552734375]),
-			L.routing.waypoint([54.322818512961135, 10.143492221832275])
-		], function(err, routes) {
-				if (err || routes.length < 1) {
-				return console.error(err)
-			}
-	
-			var line = L.routing.line(routes[0]).addTo(map)
-			map.fitBounds(line.getBounds())
-		})
+		var churchIcon = L.icon({
+			iconUrl: 'docs/images/church_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var gardenIcon = L.icon({
+			iconUrl: 'docs/images/garden_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var militaryIcon = L.icon({
+			iconUrl: 'docs/images/military_base_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var parkIcon = L.icon({
+			iconUrl: 'docs/images/park_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var restaurantIcon = L.icon({
+			iconUrl: 'docs/images/restaurant_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var sailingShipIcon = L.icon({
+			iconUrl: 'docs/images/sailing_ship_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var aquariumIcon = L.icon({
+			iconUrl: 'docs/images/aquarium_icon.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var shoppingMall = L.icon({
+			iconUrl: 'docs/images/shopingmall.png',
+			iconSize: [24, 24], // size of the icon
+			popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
 
 
-</script>
+		//Kiel Maritime Museum
+		L.marker([54.322818512961135, 10.143492221832275], { icon: meuseumIcon }).addTo(map);
+
+		//Kiel University
+		L.marker([54.338740125896415, 10.12313961982727], { icon: universityIcon }).addTo(map);
+		//Osteekai
+		L.marker([54.32585942288542, 10.146474838256834], { icon: sailingShipIcon }).addTo(map);
+		//Aquarium GEOMAR
+		L.marker([54.33015760960474, 10.148320198059082], { icon: aquariumIcon }).addTo(map);
+		//Kiel Botanical Garden
+		L.marker([54.347264569183544, 10.116734504699707], { icon: gardenIcon }).addTo(map);
+		//Sophienhof Kiel
+		L.marker([54.31642936707444, 10.130724906921387], { icon: shoppingMall }).addTo(map);
+		//Machinery Museum
+		L.marker([54.364445673222306, 10.138546228408813], { icon: meuseumIcon }).addTo(map);
+		//Tannenberg park
+		L.marker([54.364258145372155, 10.115532875061035], { icon: parkIcon }).addTo(map);
+		//Schrevenpark
+		L.marker([54.32836206075709, 10.12488842010498], { icon: parkIcon }).addTo(map);
+		//Citti-Park Kiel
+		L.marker([54.313318914476056, 10.099525451660156], { icon: shoppingMall }).addTo(map);
+		//Kiel Opera House
+		L.marker([54.323100088138816, 10.133031606674193], { icon: meuseumIcon }).addTo(map);
+
+		//St. Nikolai church
+		L.marker([54.32285605642953, 10.140037536621094], { icon: churchIcon }).addTo(map);
+		//St.-Johannes-Kirche
+		L.marker([54.313655317821514, 10.141231119632721], { icon: churchIcon }).addTo(map);
+		//Werftpark
+		L.marker([54.31512137843212, 10.156946182250977], { icon: parkIcon }).addTo(map);
+		//Kath. Pfarramt St. Nikolaus
+		L.marker([54.322680853283906, 10.13189435005188], { icon: churchIcon }).addTo(map);
+		//St. Jürgen
+		L.marker([54.31221736985766, 10.123246908187864], { icon: churchIcon }).addTo(map);
+		//Kiel University of Applied Sciences
+		L.marker([54.33226587177493, 10.179734230041504], { icon: universityIcon }).addTo(map);
+		//Tröndelsee
+		L.marker([54.30490637204568, 10.171966552734375], { icon: sailingShipIcon }).addTo(map);
+
+
+
+
+		var lineString = [[
+			10.140187740325928,
+			54.32318143172021
+		],
+		[
+			10.142505168914795,
+			54.32223658481965
+		],
+		[
+			10.144200325012207,
+			54.32437028109334
+		],
+		[
+			10.144844055175781,
+			54.32597204486173
+		],
+		[
+			10.146431922912596,
+			54.32592199068811
+		]];
+
+		var pointList = []
+		lineString.map(x => pointList.push(new L.LatLng(x[1], x[0])))
+
+		console.log(pointList);
+
+		var firstpolyline = new L.Polyline(pointList, {
+			color: 'red',
+			weight: 3,
+			opacity: 0.5,
+			smoothFactor: 1
+		});
+		firstpolyline.addTo(map);
+
+		// //var router = L.routing.osrmv1()
+		// var router = L.Routing.OSRMv1();
+
+		// console.log(router)
+
+		// router.route([
+		// 	L.routing.waypoint([54.30490637204568, 10.171966552734375]),
+		// 	L.routing.waypoint([54.322818512961135, 10.143492221832275]),
+		// 	L.routing.waypoint([54.32285605642953, 10.140037536621094]),
+		// 	L.routing.waypoint([54.338740125896415, 10.12313961982727])
+		// ], function (err, routes) {
+		// 	if (err || routes.length < 1) {
+		// 		return console.error(err)
+		// 	}
+
+		// 	var line = L.routing.line(routes[0]).addTo(map)
+		// 	map.fitBounds(line.getBounds())
+		// });
+
+		var groups = {
+		};
+
+		var layercontrol = L.control.layers(null, groups).addTo(map);
+
+		var router = new L.Routing.OSRMv1();
+
+		var route1waypoints = [
+			L.Routing.waypoint(L.latLng(54.30490637204568, 10.171966552734375)),
+			L.Routing.waypoint(L.latLng(54.322818512961135, 10.143492221832275)),
+		],
+			route1plan = L.Routing.plan(route1waypoints);
+
+		router.route(route1waypoints, function (error, routes) {
+			var route1line = L.Routing.line(routes[0]);
+			var route1group = L.layerGroup([route1plan, route1line]).addTo(map);
+			layercontrol.addOverlay(route1group, "LayerRoute1");
+		}, null, {});
+
+
+
+	</script>
 
 
 
 </body>
+
 </html>
+
+<!-- https://routing.openstreetmap.de/routed-bike/route/v1/driving/10.125664030928393,54.35912745;10.1310136,54.3134463?overview=false&alternatives=true&steps=true -->
+
