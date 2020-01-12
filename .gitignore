@@ -1,0 +1,30 @@
+.DS_Store
+/apps/ctweb/node_modules
+/fkweb/.pnp
+.pnp.js
+/fkapi/database/migrations
+.idea/
+/fkapi/app/User-copy.php
+/fkapi/vendor
+/fkapi/.idea
+
+# testing
+/fkweb/coverage
+
+
+# production
+/fkweb/build
+
+#misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/fkweb/yarn.lock
+composer.lock
+
+
