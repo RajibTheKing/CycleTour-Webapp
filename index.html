@@ -31,7 +31,7 @@
 		}
 
 		#map {
-			height: 900px;
+			height: 100%;
 		}
 	</style>
 
@@ -185,42 +185,6 @@
 		L.marker([54.30490637204568, 10.171966552734375], { icon: sailingShipIcon }).addTo(map);
 
 
-
-
-		var lineString = [[
-			10.140187740325928,
-			54.32318143172021
-		],
-		[
-			10.142505168914795,
-			54.32223658481965
-		],
-		[
-			10.144200325012207,
-			54.32437028109334
-		],
-		[
-			10.144844055175781,
-			54.32597204486173
-		],
-		[
-			10.146431922912596,
-			54.32592199068811
-		]];
-
-		var pointList = []
-		lineString.map(x => pointList.push(new L.LatLng(x[1], x[0])))
-
-		console.log(pointList);
-
-		var firstpolyline = new L.Polyline(pointList, {
-			color: 'red',
-			weight: 3,
-			opacity: 0.5,
-			smoothFactor: 1
-		});
-		firstpolyline.addTo(map);
-
 		// //var router = L.routing.osrmv1()
 		// var router = L.Routing.OSRMv1();
 
@@ -262,10 +226,25 @@
 		console.log(L.Routing.control);
 		console.log(L.Routing);
 
+		// new L.Routing.Control({
+		// 	waypoints: [
+		// 	L.latLng( 54.30490637204568, 10.171966552734375),
+		// 	L.latLng( 54.322818512961135, 10.143492221832275)],
+		// 	router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {
+		// 		urlParameters: {
+		// 		vehicle: 'bike'
+		// 		}
+		// 	})
+		// }).addTo(map);
+
+
 		new L.Routing.Control({
 			waypoints: [
 			L.latLng( 54.30490637204568, 10.171966552734375),
-			L.latLng( 54.322818512961135, 10.143492221832275)],
+			L.latLng( 54.31512137843212, 10.156946182250977),
+			L.latLng( 54.322818512961135, 10.143492221832275),
+			],
+			
 			router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {
 				urlParameters: {
 				vehicle: 'bike'
