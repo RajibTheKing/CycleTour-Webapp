@@ -18,6 +18,8 @@
 		crossorigin=""></script>
 	<!-- <script src="https://unpkg.com/leaflet-routing-machine@3.2.7/dist/leaflet-routing-machine.js"></script> -->
 	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+	<script src="http://www.liedman.net/lrm-graphhopper/dist/lrm-graphhopper-1.2.0.js"></script>
+	
 
 
 
@@ -238,24 +240,38 @@
 		// 	map.fitBounds(line.getBounds())
 		// });
 
-		var groups = {
-		};
+		// var groups = {
+		// };
 
-		var layercontrol = L.control.layers(null, groups).addTo(map);
+		// var layercontrol = L.control.layers(null, groups).addTo(map);
 
-		var router = new L.Routing.OSRMv1();
+		// var router = new L.Routing.OSRMv1();
 
-		var route1waypoints = [
-			L.Routing.waypoint(L.latLng(54.30490637204568, 10.171966552734375)),
-			L.Routing.waypoint(L.latLng(54.322818512961135, 10.143492221832275)),
-		],
-			route1plan = L.Routing.plan(route1waypoints);
+		// var route1waypoints = [
+		// 	L.Routing.waypoint(L.latLng(54.30490637204568, 10.171966552734375)),
+		// 	L.Routing.waypoint(L.latLng(54.322818512961135, 10.143492221832275)),
+		// ],
+		// 	route1plan = L.Routing.plan(route1waypoints);
 
-		router.route(route1waypoints, function (error, routes) {
-			var route1line = L.Routing.line(routes[0]);
-			var route1group = L.layerGroup([route1plan, route1line]).addTo(map);
-			layercontrol.addOverlay(route1group, "LayerRoute1");
-		}, null, {});
+		// router.route(route1waypoints, function (error, routes) {
+		// 	var route1line = L.Routing.line(routes[0]);
+		// 	var route1group = L.layerGroup([route1plan, route1line]).addTo(map);
+		// 	layercontrol.addOverlay(route1group, "LayerRoute1");
+		// }, null, {});
+
+		console.log(L.Routing.control);
+		console.log(L.Routing);
+
+		new L.Routing.Control({
+			waypoints: [
+			L.latLng( 54.30490637204568, 10.171966552734375),
+			L.latLng( 54.322818512961135, 10.143492221832275)],
+			router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {
+				urlParameters: {
+				vehicle: 'bike'
+				}
+			})
+		}).addTo(map);
 
 
 
