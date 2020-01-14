@@ -1,12 +1,10 @@
 .DS_Store
 /apps/ctweb/node_modules
+/apps/ctapi/vendor
+/apps/ctapi/database/migrations
 /fkweb/.pnp
 .pnp.js
-/fkapi/database/migrations
-.idea/
-/fkapi/app/User-copy.php
-/fkapi/vendor
-/fkapi/.idea
+.idea
 
 # testing
 /fkweb/coverage
