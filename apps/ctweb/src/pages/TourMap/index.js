@@ -392,15 +392,6 @@ const polyline = [
   ]
 ]
 
-const outer = [
-  [50.505, -29.09],
-  [52.505, 29.09],
-]
-const inner = [
-  [49.505, -2.09],
-  [53.505, 2.09],
-]
-
 class TourMap extends Component {
   constructor() {
     super();
@@ -412,6 +403,16 @@ class TourMap extends Component {
       marker1: {
         lat: 54.322818512961135,
         lng: 10.143492221832275,
+      },
+
+      marker2: {
+        lat: 54.338740125896415,
+        lng: 10.12313961982727,
+      },
+
+      marker3: {
+        lat: 54.364258145372155,
+        lng: 10.115532875061035,
       },
     };
   }
@@ -446,7 +447,7 @@ class TourMap extends Component {
     const { lat, lng, zoom } = this.state;
     const position = [lat, lng];
     console.log("Inside Render", this.state.marker1);
-    
+    //<Marker draggable position={this.state.marker1} ref={this.refmarker} onDragend={this.updatePosition}></Marker>
     return (
       <Map center={position} zoom={zoom} ref={this.saveMap}>
         
@@ -460,19 +461,13 @@ class TourMap extends Component {
             url="http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
           />
-          {this.state.isMapInit && <Routing map={this.map} marker1={this.state.marker1}/>}
+          {this.state.isMapInit && <Routing map={this.map} 
+                                            marker1={this.state.marker1}
+                                            marker2={this.state.marker2}
+                                            marker3={this.state.marker3}/>}
           
-          <Marker draggable position={this.state.marker1} ref={this.refmarker} onDragend={this.updatePosition}>
-            <Popup> Kiel Maritime Museum </Popup>
-          </Marker>
-
-          <Marker draggable position={[54.338740125896415, 10.12313961982727]}>
-            <Popup> Kiel University </Popup>
-          </Marker>
-
-          <Marker draggable position={[54.364258145372155, 10.115532875061035]}>
-            <Popup>Tannenberg park</Popup>
-          </Marker>
+          
+          
 
           <Polyline color="green" weight="6" positions={polyline.map(x => [x[1],x[0]])} />
           
