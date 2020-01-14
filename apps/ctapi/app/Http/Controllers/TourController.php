@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Place;
+use App\Tour;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PlaceController extends Controller
+class TourController extends Controller
 {
 
-    public function showAllPlaces(){
+    public function showAllTours(){
 
         $bikes = DB::table('bikes')
                     ->select(DB::raw('bikes.*'))
@@ -25,7 +25,7 @@ class PlaceController extends Controller
         ], 200);
     }
 
-    public function showPlaceById($id){
+    public function showTourById($id){
 
 
         $bike = DB::table('bikes')

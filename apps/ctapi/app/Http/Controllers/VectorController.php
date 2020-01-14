@@ -7,10 +7,10 @@ use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PlaceController extends Controller
+class VectorController extends Controller
 {
 
-    public function showAllPlaces(){
+    public function showAllVectors(){
 
         $bikes = DB::table('bikes')
                     ->select(DB::raw('bikes.*'))

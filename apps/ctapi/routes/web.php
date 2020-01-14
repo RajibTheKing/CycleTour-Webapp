@@ -28,38 +28,6 @@ $router->group(
 
 $router->group(
     [
-        'prefix' => 'v1/places'
-    ], function () use ($router) {
-        $router->get('/',  ['uses' => 'PlaceController@showAllPlaces']);
-        $router->get('/{id}', ['uses' => 'PlaceController@showPlaceById']);
-});
-
-$router->group(
-    [
-        'prefix' => 'v1/tours'
-    ], function () use ($router) {
-        $router->get('/',  ['uses' => 'TourController@showAllTours']);
-        $router->get('/{id}', ['uses' => 'TourController@showTourById']);
-});
-
-$router->group(
-    [
-        'prefix' => 'v1/city'
-    ], function () use ($router) {
-        $router->get('/kiel', ['uses' => 'CityController@showCityById']);
-});
-
-$router->group(
-    [
-        'prefix' => 'v1/vector'
-    ], function () use ($router) {
-        $router->get('/', ['uses' => 'VectorController@showAllVectors']);
-});
-
-
-
-$router->group(
-    [
         'prefix' => 'v1/bikes'
     ], function () use ($router) {
         $router->post('/search',  ['uses' => 'BikeController@showSearchedBikes']);
@@ -80,6 +48,39 @@ $router->group(
     $router->post('/payment', ['uses' => 'OrderController@paymenOfOrder']);
     $router->post('/edit', ['uses' => 'OrderController@updateOrder']);
 
+});
+
+
+//CT Routes 
+
+$router->group(
+    [
+        'prefix' => 'v1/places'
+    ], function () use ($router) {
+        $router->get('/',  ['uses' => 'PlaceController@showAllPlaces']);
+        $router->get('/{id}', ['uses' => 'PlaceController@showPlaceById']);
+});
+
+$router->group(
+    [
+        'prefix' => 'v1/tours'
+    ], function () use ($router) {
+        $router->get('/',  ['uses' => 'TourController@showAllTours']);
+        $router->get('/{id}', ['uses' => 'TourController@showTourById']);
+});
+
+$router->group(
+    [
+        'prefix' => 'v1/cities'
+    ], function () use ($router) {
+        $router->get('/{id}', ['uses' => 'CityController@showCityById']);
+});
+
+$router->group(
+    [
+        'prefix' => 'v1/vectors'
+    ], function () use ($router) {
+        $router->get('/', ['uses' => 'VectorController@showAllVectors']);
 });
 
 

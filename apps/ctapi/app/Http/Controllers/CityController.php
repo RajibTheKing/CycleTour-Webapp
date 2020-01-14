@@ -2,31 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Place;
+use App\City;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PlaceController extends Controller
+class CityController extends Controller
 {
 
-    public function showAllPlaces(){
-
-        $bikes = DB::table('bikes')
-                    ->select(DB::raw('bikes.*'))
-                    ->get();
-
-        // distance
-        // ST_Distance(geography(ST_MakePoint("bikes"."lon", "bikes"."lat")), geography(ST_MakePoint('.$lon.','.$lat.'))) as distance
-
-        return response()->json([
-            'bikes' => $bikes,
-            'message' => 'Success'
-        ], 200);
-    }
-
-    public function showPlaceById($id){
-
+    public function showCityById($id){
 
         $bike = DB::table('bikes')
                     ->join('bike_info', 'bike_info.bike_id', '=', 'bikes.id')
