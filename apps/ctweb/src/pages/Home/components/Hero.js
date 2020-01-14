@@ -80,17 +80,6 @@ class Hero extends React.Component{
     }
 
     render(){
-        if(this.state.search){
-
-            return(
-                <Redirect
-                    to={{
-                        pathname: "/bikes",
-                        search: queryString.stringify(this.state) 
-                    }}
-                />
-            )
-        }
         return(
             <section className="hero-home">
                 <div className="swiper-container hero-slider swiper-container-fade swiper-container-horizontal">
@@ -103,69 +92,8 @@ class Hero extends React.Component{
                     <div className="row">
                         <div className="col-xl-10">
                             <div className="text-center text-lg-left">
-                                <p className="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">Discover Beauty of Kiel</p>
-                                <h1 className="display-3 font-weight-bold text-shadow">Feel Freedom of Life</h1>
-                            </div>
-                            <div className="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
-                                <form onSubmit={this.handleSubmit}>
-                                    <div className="row">
-                                        <div className="col-lg-4 d-flex align-items-center form-group">
-                                            <div className="input-label-absolute input-label-absolute-right w-100">
-                                                <label htmlFor="location" className="label-absolute"><i className="fa fa-crosshairs"></i><span className="sr-only">Location</span></label>
-                                                <Autocomplete
-                                                    className ={'form-control border-0 shadow-0'}
-                                                    style={{width: '90%'}}
-                                                    onPlaceSelected={this.handleLocationChange}
-                                                    types={['address']}
-                                                    componentRestrictions={{country: "de"}}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 d-flex align-items-center form-group">
-                                            <div className="input-label-absolute input-label-absolute-right w-100">
-                                                <label htmlFor="location" className="label-absolute"><i className="fa fa-calendar-alt"></i><span className="sr-only">Pickup</span></label>
-                                                <DatePicker
-                                                    selected={this.state.startDate}
-                                                    onChange={this.handleChangeDateTimeStart}
-                                                    showTimeSelect
-                                                    timeFormat="HH:mm"
-                                                    timeIntervals={15}
-                                                    dateFormat="yyyy-MM-dd HH:mm"
-                                                    timeCaption="time"
-                                                    withPortal
-                                                    name="pickup"
-                                                    minDate={new Date()}
-                                                    className="form-control border-0 shadow-0 date-control"
-                                                    ref={this.pickup}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 d-flex align-items-center form-group">
-                                            <div className="input-label-absolute input-label-absolute-right w-100">
-                                                <label htmlFor="location" className="label-absolute"><i className="fa fa-calendar-alt"></i><span className="sr-only">Dropoff</span></label>
-                                                <DatePicker
-                                                    selected={this.state.endDate}
-                                                    onChange={this.handleChangeDateTimeEnd}
-                                                    showTimeSelect
-                                                    timeFormat="HH:mm"
-                                                    timeIntervals={15}
-                                                    dateFormat="yyyy-MM-dd HH:mm"
-                                                    timeCaption="time"
-                                                    withPortal
-                                                    minDate={new Date()}
-                                                    name="dropoff"
-                                                    className="form-control border-0 shadow-0 date-control"
-                                                    showLeadingZeros="true"
-                                                    ref={this.dropoff}
-                                                />
-                                                
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-2">
-                                            <button type="submit" className="btn btn-primary btn-block rounded-xl h-100">Search </button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <p className="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">Discover Amazing Place</p>
+                                <h1 className="display-3 font-weight-bold text-shadow">Enjoy bike tour in Kiel</h1>
                             </div>
                         </div>
                     </div>

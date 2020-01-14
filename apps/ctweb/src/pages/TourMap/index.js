@@ -431,7 +431,7 @@ class TourMap extends React.Component {
         
           
           <TileLayer
-            url="http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
           {this.state.isMapInit && <Routing map={this.map} />}
@@ -447,9 +447,8 @@ class TourMap extends React.Component {
           <Marker position={[54.364258145372155, 10.115532875061035]}>
             <Popup>Tannenberg park</Popup>
           </Marker>
-          <Pane name="cyan-rectangle" style={{ zIndex: 500 }}>
             <Polyline color="green" weight="6" positions={polyline.map(x => [x[1],x[0]])} />
-          </Pane>
+          
       </Map>
     );
   }

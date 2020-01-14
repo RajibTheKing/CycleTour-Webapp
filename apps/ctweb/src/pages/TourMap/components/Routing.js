@@ -10,8 +10,10 @@ class Routing extends MapLayer {
   
     let leafletElement = new L.Routing.Control({
 			waypoints: [
-			L.latLng( 54.322818512961135, 10.143492221832275),
-			L.latLng( 54.338740125896415, 10.12313961982727)
+      L.latLng( 54.322818512961135, 10.143492221832275),
+      L.latLng( 54.364258145372155, 10.115532875061035),
+      L.latLng( 54.338740125896415, 10.12313961982727),
+      
 			],
 			
 			router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {

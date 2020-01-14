@@ -28,10 +28,6 @@ class Navigation extends React.Component{
     render(){
 
         const { userAuth } = this.props.state
-
-        console.log(userAuth);
-        
-        
         
         return(
             <div id="navbarCollapse" className="collapse navbar-collapse">
@@ -40,13 +36,17 @@ class Navigation extends React.Component{
                         <NavLink to="/" className="nav-link">Home</NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <NavLink to="/map" className="nav-link">Tour Map</NavLink>
+                        <NavLink to="/map" className="nav-link">Tour Maps</NavLink>
                     </NavItem>
-                    
+                    <NavItem className="nav-item">
+                        <NavLink to="/kiel" className="nav-link">Places of Kiel</NavLink>
+                    </NavItem>
                     <NavItem className="nav-item">
                         <NavLink to="/about" className="nav-link">About Us</NavLink>
                     </NavItem>
-                        
+                    <NavItem className="nav-item">
+                        <NavLink to="/about" className="nav-link">Help</NavLink>
+                    </NavItem>
                 </Nav>
             </div>
         )

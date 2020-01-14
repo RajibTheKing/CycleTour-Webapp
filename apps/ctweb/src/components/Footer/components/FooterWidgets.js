@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './../../Logo/index'
 
 class FooterWidgets extends React.Component {
     render(){
@@ -7,7 +8,7 @@ class FooterWidgets extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 mb-5 mb-lg-0">
-                            <div className="font-weight-bold text-uppercase text-dark mb-3">Freedom Kiel</div>
+                            <div className="font-weight-bold text-uppercase text-dark mb-3"> <Logo /></div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                             <ul className="list-inline">
                                 <li className="list-inline-item">
@@ -23,19 +24,19 @@ class FooterWidgets extends React.Component {
                                     <a href="#" target="_blank" className="text-muted text-hover-primary"><i className="fab fa-pinterest"></i></a>
                                 </li>
                             </ul>
+                            <p className="text-sm mb-md-0 text-md-left">© 2020 Your company.  All rights reserved.</p>
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                            <h6 className="text-uppercase text-dark mb-3">Rentals</h6>
+                            <h6 className="text-uppercase text-dark mb-3">Tours</h6>
                             <ul className="list-unstyled">
-                                <li><a href="#" className="text-muted">Rooms</a></li>
-                                <li><a href="#" className="text-muted">Map on top</a></li>
-                                <li><a href="#" className="text-muted">Side map</a></li>
-                                <li><a href="#" className="text-muted">No map</a></li>
-                                <li><a href="#" className="text-muted">Room detail</a></li>
+                                <li><a href="#" className="text-muted">Tour Maps</a></li>
+                                <li><a href="#" className="text-muted">Emergency Help</a></li>
+                                <li><a href="#" className="text-muted">About Kiel</a></li>
+                                <li><a href="#" className="text-muted">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div className="col-lg-4">
-                            <h6 className="text-uppercase text-dark mb-3">Daily Offers &amp; Discounts</h6>
+                            <h6 className="text-uppercase text-dark mb-3">Subscribe Newsletter</h6>
                             <p className="mb-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
                             <form action="#" id="newsletter-form">
                                 <div className="input-group mb-3">

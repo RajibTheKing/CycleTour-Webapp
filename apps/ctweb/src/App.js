@@ -23,10 +23,9 @@ function App() {
 				<Route path="/bikes" component={Bikes} />
 				<Route path="/map" component={TourMap} />
 				<Route path="/bike/:id" component={BikeSingle} />
-				<Route path="/login" component={Login} />
+				<Route path="/kiel" component={TourMap} />
 				<Route path="/register" component={Register} />
 				<Route path="/profile" component={Profile} />
-				
 				<Footer/>
 			</BrowserRouter>
 			

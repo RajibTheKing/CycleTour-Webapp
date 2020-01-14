@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from './../../Logo/index'
+
 
 
 class FooterBottom extends React.Component {
@@ -12,7 +12,7 @@ class FooterBottom extends React.Component {
                             <Logo />
                         </div>
                         <div className="col-md-6">
-                            <p className="text-sm mb-md-0 text-md-right">© 2019 Your company.  All rights reserved.</p>
+                            <p className="text-sm mb-md-0 text-md-right">© 2020 Your company.  All rights reserved.</p>
                         </div>
                     </div>
                 </div>
