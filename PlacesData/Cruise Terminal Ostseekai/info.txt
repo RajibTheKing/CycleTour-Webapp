@@ -1,0 +1,16 @@
+
+
+Places:
+
+Title: Cruise Terminal Ostseekai
+Type: Dock
+Location: 54.3192111, 10.1395470
+
+
+Place_information:
+
+Description: The Ostseekai is a quay in the Schleswig-Holstein capital of Kiel with two ship berths for passenger ships , which is located directly on the city center on the western side of the Kiel Fjord .
+
+address: Wall 65, 24103 Kiel
+webpage:https://www.portofkiel.com/haefen-terminals.html
+rating: 4.3

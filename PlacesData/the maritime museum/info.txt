@@ -1,0 +1,16 @@
+
+
+Places:
+
+Title: the maritime museum
+Type: museum
+Location: 54.3227095, 10.1433355
+
+
+Place_information:
+
+Description: The Ostseekai is a quay in the Schleswig-Holstein capital of Kiel with two ship berths for passenger ships , which is located directly on the city center on the western side of the Kiel Fjord .
+
+address: Wall 65, 24103 Kiel
+webpage: https://www.kiel.de/de/kultur_freizeit/museum/schifffahrtsmuseum_fischhalle.php
+rating: 4.3
