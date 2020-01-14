@@ -1,0 +1,21 @@
+
+Places:
+
+Title: St. Nikolai church
+Type: church
+Location: 54.4552039, 10.1976737
+icon: fa-church
+
+Place_information:
+
+Description: Accessible by foot 15min stroll from the main train station. It's near the main town hall, and with lots of restaurants and shops along the way to the church. There are many beautiful paintings and artifacts in the main hall, with many souvenirs a visitor could buy for as little as 1 eur
+
+address: Alter Markt, 24103 Kiel
+webpage: www.st-nikolai-kiel.de
+rating: 4.6
+
+
+
+
+
+

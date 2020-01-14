@@ -1,4 +1,20 @@
-address: 24229 Strande
-webpage: 
 
-Description: Currently (as of 23/11/2019) still closed due to renovations - which logically makes sense in the fall. Unfortunately, I found no evidence (according to the website renovations from 18.11.2019 to 21.11.2019). Only when I wanted to buy the tickets in the lighthouse pavilion, they pointed out. Pity!
+Places:
+
+Title: Leuchtturm Bülk
+Type: light house
+Location: 54.4552039, 10.1976737
+
+
+Place_information:
+
+Description: Currently (as of 23/11/2019) still closed due to renovations - which logically makes sense in the fall. Unfortunately, There is no evidence (according to the website renovations from 18.11.2019 to 21.11.2019).Very nice place to visit in any weather. You can go for a walk and stay at the pavilion drinking a chocolate milk.
+
+address: 24229 Strande
+webpage: None
+rating: 4.4
+
+
+
+
+
