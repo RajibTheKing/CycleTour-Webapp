@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import L from 'leaflet'
 import { Map, TileLayer, withLeaflet, MapControl, Popup, Marker, Polyline, Pane } from "react-leaflet";
 
@@ -401,16 +401,23 @@ const inner = [
   [53.505, 2.09],
 ]
 
-class TourMap extends React.Component {
+class TourMap extends Component {
   constructor() {
     super();
     this.state = {
       lat: 54.32313137415068,
       lng: 10.139522552490234,
       zoom: 12,
-      isMapInit: false
+      isMapInit: false,
+      marker1: {
+        lat: 54.322818512961135,
+        lng: 10.143492221832275,
+      },
     };
   }
+
+  // $FlowFixMe: ref
+  refmarker = createRef()
 
   saveMap = map => {
     this.map = map;
@@ -422,10 +429,24 @@ class TourMap extends React.Component {
     
   };
 
+  updatePosition = () => {
+    const marker = this.refmarker.current
+    if (marker != null) {
+      this.setState({
+        marker1: marker.leafletElement.getLatLng(),
+      })
+      console.log(this.state.marker1)
+    }
+    //this.forceUpdate();
+
+  }
+
+
   render() {
     const { lat, lng, zoom } = this.state;
     const position = [lat, lng];
-
+    console.log("Inside Render", this.state.marker1);
+    
     return (
       <Map center={position} zoom={zoom} ref={this.saveMap}>
         
@@ -439,20 +460,21 @@ class TourMap extends React.Component {
             url="http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
           />
-          {this.state.isMapInit && <Routing map={this.map} />}
+          {this.state.isMapInit && <Routing map={this.map} marker1={this.state.marker1}/>}
           
-          <Marker position={[54.322818512961135, 10.143492221832275]}>
+          <Marker draggable position={this.state.marker1} ref={this.refmarker} onDragend={this.updatePosition}>
             <Popup> Kiel Maritime Museum </Popup>
           </Marker>
 
-          <Marker position={[54.338740125896415, 10.12313961982727]}>
+          <Marker draggable position={[54.338740125896415, 10.12313961982727]}>
             <Popup> Kiel University </Popup>
           </Marker>
 
-          <Marker position={[54.364258145372155, 10.115532875061035]}>
+          <Marker draggable position={[54.364258145372155, 10.115532875061035]}>
             <Popup>Tannenberg park</Popup>
           </Marker>
-            <Polyline color="green" weight="6" positions={polyline.map(x => [x[1],x[0]])} />
+
+          <Polyline color="green" weight="6" positions={polyline.map(x => [x[1],x[0]])} />
           
       </Map>
     );
