@@ -36,7 +36,7 @@ class Navigation extends React.Component{
                         <NavLink to="/" className="nav-link">Home</NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <NavLink to="/map" className="nav-link">Tour Maps</NavLink>
+                        <NavLink to="/tours" className="nav-link">Tour Maps</NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
                         <NavLink to="/kiel" className="nav-link">Places of Kiel</NavLink>

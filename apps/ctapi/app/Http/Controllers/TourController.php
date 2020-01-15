@@ -31,10 +31,11 @@ class TourController extends Controller
                     ->join('places', 'places.id', '=', 'tour_spots.place_id')
                     ->select(DB::raw('tour_spots.*, places.*'))
                     ->where('tour_spots.tour_id', '=', $id)
-                    ->first();
+                    ->orderBy('places.geom')
+                    ->get();
 
         return response()->json([
-            'spots' => Tour::find($id),
+            'spots' => $spots,
             'message' => 'Success'
         ], 200);
     }

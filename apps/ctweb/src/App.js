@@ -5,6 +5,7 @@ import Header from './components/Header/index';
 import Footer from './components/Footer';
 import Home from './pages/Home/index'
 import TourMap from './pages/TourMap/index'
+import Tours from './pages/Tours/index'
 import PlaceMap from './pages/PlaceMap/index'
 import Bikes from './pages/Bikes/index'
 import BikeSingle from './pages/BikeSingle/index';
@@ -22,7 +23,8 @@ function App() {
 				<Header />
 				<Route exact path="/" component={Home} />
 				<Route path="/bikes" component={Bikes} />
-				<Route path="/map" component={TourMap} />
+				<Route path="/tours" component={Tours} />
+				<Route path="/tour/:id" component={TourMap} />
 				<Route path="/bike/:id" component={BikeSingle} />
 				<Route path="/kiel" component={PlaceMap} />
 				<Route path="/register" component={Register} />
