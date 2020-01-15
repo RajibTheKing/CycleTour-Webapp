@@ -1,0 +1,13 @@
+Places:
+
+Title: Botanical garden of the University of Kiel
+Type: Garden
+Location: 54.347452174611895, 10.117034912109375
+icon: fa-tree
+
+Place_information:
+
+Description: The Botanic Gardens Kiel belong to the Botanical Institute of Kiel University and boast a history reaching back 350 years. Now at their fifth location within the city of Kiel, the gardens have been open to the public since 1985 and harbour about 14,000 plant species for science, for research and the training of students and for the enjoyment and instruction of visitors.
+address: Am Botanischen Garten 1-9, 24118 Kiel
+webpage: http://www.botanischer-garten.uni-kiel.de/en
+rating: 4.6

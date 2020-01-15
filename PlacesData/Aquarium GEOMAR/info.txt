@@ -1,0 +1,17 @@
+
+Places:
+
+Title: Aquarium GEOMAR
+Type: Aquarium
+Location: 54.332491080335274, 10.15063762664795
+icon: fa-fish
+
+Place_information:
+
+Description: Our shop window on the maritime worlds is located directly on the Kiel Fjord and invites you to discover domestic but also exotic underwater worlds .
+    Various animal species from the North and Baltic Seas, the Mediterranean and the tropics live on 350 m² of exhibition space. Our group of seals entertains visitors in the freely accessible outdoor enclosure. Special highlights are the feeding, where our seals like to show some tricks ...
+    With more than 80,000 visitors a year, our GEOMAR aquarium is one of the tourist attractions of the Schleswig-Holstein state capital. A visit as a family with children, with the school class or kindergarten - it is always worth it, regardless of the weather.
+
+address: Düsternbrooker Weg 20, 24105
+webpage: https://www.aquarium-geomar.de/
+rating: 4.1

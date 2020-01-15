@@ -1,0 +1,14 @@
+
+Places:
+
+Title: Kieler Hörn
+Type: Architecture
+Location: 54.311666586491185, 10.133342742919922
+icon: fa-archway
+
+Place_information:
+
+Description: The port of the state capital Kiel, which forms the southern end of the Kiel Fjord, is called the Hörn or “Die Hörn”. The Hörn has been spanned by the three-part Hörn Bridge for pedestrians and cyclists since 1997
+address: 24103 Kiel
+webpage: None
+rating: 4.4

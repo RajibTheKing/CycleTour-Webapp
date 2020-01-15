@@ -1,0 +1,14 @@
+
+Places:
+
+Title: Old Levensau high bridge
+Type: Architecture
+Location: 54.36835855903355, 10.077295303344727
+icon: fa-archway
+
+Place_information:
+
+Description: As part of the federal highway 76 that span Levensau bridges the Kiel Canal at Kiel . The high bridges lie between Suchsdorf and Neuwittenbek , OT Levensau.
+address: K24, 24107 Kiel
+webpage: None
+rating: 4.7

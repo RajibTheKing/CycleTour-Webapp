@@ -1,0 +1,14 @@
+
+Places:
+
+Title: Flanders bunker,Kilian Memorial
+Type: Architecture
+Location: 54.35464307045243, 10.138771533966064
+icon: fa-archway
+
+Place_information:
+
+Description: The submarine bunker Kilian on the site of the Kiel War Shipyard (from 1943: Howaldtswerke Kiel ) was built between 1941 and 1943 on the northern bank of the Schwentine estuary in Kiel-Dietrichsdorf using forced labor and was put into operation as a submarine bunker .
+address: Kiellinie 249, 24106 Kiel
+webpage: http://www.mahnmalkilian.de/flandernbunker.html
+rating: 4.2

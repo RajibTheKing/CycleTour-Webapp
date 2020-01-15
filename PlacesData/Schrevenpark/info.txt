@@ -1,0 +1,13 @@
+Places:
+
+Title: Schrevenpark
+Type: Park
+Location: 54.328587290696355, 10.125446319580078
+icon: fa-trees
+
+Place_information:
+
+Description: The Kiel district of Schreventeich lies between the districts of Hasseldieksdamm and ... December 1947, the Council decided to rename Schrevenpark based on the Schreventeich.
+address: Goethestrasse 15, 24116 Kiel
+webpage: none
+rating: 4.3

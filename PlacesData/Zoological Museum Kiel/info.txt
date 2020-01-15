@@ -1,0 +1,14 @@
+
+Places:
+
+Title: Zoological Museum Kiel
+Type: Museum
+Location: 54.32808677804514, 10.143921375274658
+icon: fa-archway
+
+Place_information:
+
+Description: The Zoological Museum Kiel is a facility of the Christian-Albrechts-University of Kiel, whose history goes back to the 17th century.
+address: Hegewischstrasse 2, 24105 Kiel
+webpage: http://www.zoologisches-museum.uni-kiel.de/index.php
+rating: 4.6
