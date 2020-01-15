@@ -400,20 +400,22 @@ class TourMap extends Component {
       lng: 10.139522552490234,
       zoom: 12,
       isMapInit: false,
-      marker1: {
-        lat: 54.322818512961135,
-        lng: 10.143492221832275,
-      },
+      markers: [
+        {
+          lat: 54.322818512961135,
+          lng: 10.143492221832275,
+        },
+      
+        {
+          lat: 54.338740125896415,
+          lng: 10.12313961982727,
+        },
 
-      marker2: {
-        lat: 54.338740125896415,
-        lng: 10.12313961982727,
-      },
-
-      marker3: {
-        lat: 54.364258145372155,
-        lng: 10.115532875061035,
-      },
+        {
+          lat: 54.364258145372155,
+          lng: 10.115532875061035,
+        },
+      ]
     };
   }
 
@@ -462,9 +464,7 @@ class TourMap extends Component {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
           />
           {this.state.isMapInit && <Routing map={this.map} 
-                                            marker1={this.state.marker1}
-                                            marker2={this.state.marker2}
-                                            marker3={this.state.marker3}/>}
+                                            markers={this.state.markers}/>}
           
           
           

@@ -18,15 +18,12 @@ class Routing extends MapLayer {
 
   createLeafletElement() {
     
-    const {map, marker1, marker2, marker3} = this.props;
-    console.log("TheKing--> createLeafLetElement", marker1);
+    const {map, markers} = this.props;
+    console.log("TheKing--> createLeafLetElement", markers);
 
     let wapointList = [];
-    wapointList.push(L.latLng(marker1.lat, marker1.lng));
-    wapointList.push(L.latLng(marker2.lat, marker2.lng));
-    wapointList.push(L.latLng(marker3.lat, marker3.lng));
+    markers.map(x => wapointList.push(L.latLng(x.lat, x.lng)));
     
-  
     let leafletElement = new L.Routing.Control({
 			waypoints: wapointList,
 			router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {
