@@ -115,6 +115,10 @@ section.place-list{
     background: #fff!important;
 }
 
+.tour_grid_item{
+    margin-bottom: 30px;
+}
+
 .tour_grid_item,
 .tour_grid_item_post_thumbnail,
 .tour_grid_item_post_thumbnail a{
