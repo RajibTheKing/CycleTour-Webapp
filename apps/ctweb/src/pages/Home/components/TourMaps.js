@@ -99,7 +99,7 @@ class TourMaps extends React.Component{
                     </div>
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <Link to="/kiel" className="btn btn-primary btn-block btn-tour">View All Places</Link>
+                            <Link to="/kiel" className="btn btn-primary btn-block btn-tour">View All Tours</Link>
                         </div>
                     </div>
                 </div>

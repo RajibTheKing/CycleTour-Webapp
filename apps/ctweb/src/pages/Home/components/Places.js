@@ -12,7 +12,7 @@ class Places extends React.Component{
                 <div className="container">
                     <div className="text-center pb-lg-4">
                         <p className="subtitle text-secondary">Explore the beauty of Kiel </p>
-                        <h2 className="mb-5">Popular Tours</h2>
+                        <h2 className="mb-5">Popular Places</h2>
                     </div>
                     <div className="row">
                         <div className="col-lg-4 mb-3 mb-lg-0 text-center">
@@ -57,7 +57,7 @@ class Places extends React.Component{
                     </div>
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <Link to="/kiel" className="btn btn-primary btn-block btn-tour">View All Tours</Link>
+                            <Link to="/kiel" className="btn btn-primary btn-block btn-tour">View All Places</Link>
                         </div>
                     </div>
                 </div>

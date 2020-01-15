@@ -1,7 +1,6 @@
 const freedomKielApi ={
-    URL: 'http://api.freedom-kiel.com/v1',
-    // URL: 'http://127.0.0.1:8080/v1',
-    siteUrl: 'http://freedom-kiel.com'
+    URL: 'http://127.0.0.1:8080/v1',
+    siteUrl: 'http://localhost:3000'
 }
 
 export default freedomKielApi;
