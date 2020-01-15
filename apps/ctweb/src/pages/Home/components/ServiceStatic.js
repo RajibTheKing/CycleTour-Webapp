@@ -7,8 +7,8 @@ class ServiceStatic extends React.Component{
     render(){
         return(
             <div>
-               <Places />
-               <TourMaps />
+                <TourMaps />
+                <Places />
             </div>
         )
     }
