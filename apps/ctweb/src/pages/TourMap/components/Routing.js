@@ -43,7 +43,7 @@ class Routing extends MapLayer {
           }
         ]
       },
-      addWaypoints: false,
+      addWaypoints: true,
       draggableWaypoints: true,
       fitSelectedRoutes: false,
       showAlternatives: false,
