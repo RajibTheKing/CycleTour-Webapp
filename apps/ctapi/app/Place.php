@@ -20,7 +20,7 @@ class Place extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description','size','sex','minimum_rent','daily_rent', 'photos', 'location', 'created_by'
+        'title', 'type','marker','lat','lon','geom', 'photos', 'location', 'created_by'
     ];
 
     /**
@@ -29,6 +29,6 @@ class Place extends Model
      * @var array
      */
     protected $hidden = [
-        'last_connection','create_date','modified_date','status'
+        'create_at','modified_on','status'
     ];
 }
