@@ -3,7 +3,7 @@ Places:
 
 Title: St. Nikolai church
 Type: church
-Location: 54.4552039, 10.1976737
+Location: 54.32320646048212, 10.139436721801758
 icon: fa-church
 
 Place_information:

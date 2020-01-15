@@ -1,14 +1,13 @@
-
 Places:
 
-Title: Kieler Hörn
+Title: Old Levensau high bridge
 Type: Architecture
-Location: 54.311666586491185, 10.133342742919922
+Location: 54.36835855903355, 10.077295303344727
 icon: fa-archway
 
 Place_information:
 
-Description: The port of the state capital Kiel, which forms the southern end of the Kiel Fjord, is called the Hörn or “Die Hörn”. The Hörn has been spanned by the three-part Hörn Bridge for pedestrians and cyclists since 1997
-address: 24103 Kiel
+Description: As part of the federal highway 76 that span Levensau bridges the Kiel Canal at Kiel . The high bridges lie between Suchsdorf and Neuwittenbek , OT Levensau.
+address: K24, 24107 Kiel
 webpage: None
-rating: 4.4
+rating: 4.7
