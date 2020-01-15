@@ -31,6 +31,7 @@ $router->group(
     ], function () use ($router) {
         $router->get('/',  ['uses' => 'TourController@showAllTours']);
         $router->get('/{id}', ['uses' => 'TourController@showTourById']);
+        $router->get('map/{id}', ['uses' => 'TourController@showSpotsByTourId']);
 });
 
 $router->group(

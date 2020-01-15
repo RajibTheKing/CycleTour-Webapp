@@ -20,7 +20,7 @@ class Tour extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description','size','sex','minimum_rent','daily_rent', 'photos', 'location', 'created_by'
+        'title', 'description','route_geodata','duration','start_point','end_point', 'major_spots', 'image',
     ];
 
     /**
@@ -29,6 +29,6 @@ class Tour extends Model
      * @var array
      */
     protected $hidden = [
-        'last_connection','create_date','modified_date','status'
+        'create_at','modified_on'
     ];
 }
