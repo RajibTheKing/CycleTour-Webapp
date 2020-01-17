@@ -32,8 +32,14 @@ class PlaceController extends Controller
                     ->where('places.id', '=', $id)
                     ->first();
 
+                    $places = DB::table('places')
+                    ->join('place_infomation', 'place_infomation.place_id', '=', 'places.id')
+                    ->select(DB::raw('places.*, place_infomation.*'))
+                    ->get();
+
         return response()->json([
             'place' => $place,
+            'places' => $places,
             'message' => 'Success'
         ], 200);
     }

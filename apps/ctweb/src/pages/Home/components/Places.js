@@ -19,12 +19,12 @@ class Places extends React.Component{
                             <div className="tour_grid_item">
 							    <div className="tour_grid_item_post_thumbnail">
 									<Link to="/" title="Bellagio, Italy">
-											<img className="tour_grid_item_inner_image img-fluid" src="http://travelicious.bold-themes.com/main-demo/wp-content/uploads/sites/2/2015/04/post_09-1280x1280.jpg" />
+											<img className="tour_grid_item_inner_image img-fluid" src="/images/places/ostseekai_terminal.jpg" />
 									</Link>
 							    </div>
 							    <div className="tour_grid_item_inner_content">
-                                    <h5 className="tour_grid_item_post_title">Kiel HBF</h5>
-                                    <div className="tour_grid_item_post_excerpt">Kiel is a village on a promontory jutting out into Lake Como, in Italy.</div>
+                                    <h5 className="tour_grid_item_post_title">Cruise Terminal Ostseekai</h5>
+                                    <div className="tour_grid_item_post_excerpt">Nam a nisl non lorem volutpat hendrerit sed non metus. Proin semper dictum maximus.</div>
                                 </div>
                             </div>
                         </div>
@@ -32,12 +32,12 @@ class Places extends React.Component{
                             <div className="tour_grid_item">
 							    <div className="tour_grid_item_post_thumbnail">
 									<Link to="/" title="Bellagio, Italy">
-											<img className="tour_grid_item_inner_image img-fluid" src="http://travelicious.bold-themes.com/main-demo/wp-content/uploads/sites/2/2015/05/post_07-1280x1280.jpg" />
+											<img className="tour_grid_item_inner_image img-fluid" src="/images/places/the_maritime_museum.jpg" />
 									</Link>
 							    </div>
 							    <div className="tour_grid_item_inner_content">
-                                    <h5 className="tour_grid_item_post_title">CAU</h5>
-                                    <div className="tour_grid_item_post_excerpt">Kiel is a village on a promontory jutting out into Lake Como, in Italy.</div>
+                                    <h5 className="tour_grid_item_post_title">The Maritime Museum</h5>
+                                    <div className="tour_grid_item_post_excerpt">Nam a nisl non lorem volutpat hendrerit sed non metus. Proin semper dictum maximus</div>
                                 </div>
                             </div>
                         </div>
@@ -45,12 +45,12 @@ class Places extends React.Component{
                             <div className="tour_grid_item">
 							    <div className="tour_grid_item_post_thumbnail">
 									<Link to="/" title="Bellagio, Italy">
-											<img className="tour_grid_item_inner_image img-fluid" src="http://travelicious.bold-themes.com/main-demo/wp-content/uploads/sites/2/2015/04/post_08-1280x1280.jpg" />
+											<img className="tour_grid_item_inner_image img-fluid" src="/images/places/schrevenpark.jpg" />
 									</Link>
 							    </div>
 							    <div className="tour_grid_item_inner_content">
-                                    <h5 className="tour_grid_item_post_title">Berlin</h5>
-                                    <div className="tour_grid_item_post_excerpt">Kiel is a village on a promontory jutting out into Lake Como, in Italy.</div>
+                                    <h5 className="tour_grid_item_post_title">Schrevenpark</h5>
+                                    <div className="tour_grid_item_post_excerpt">Schrevenpark is a village on a promontory jutting out into Lake Como, in Italy.</div>
                                 </div>
                             </div>
                         </div>

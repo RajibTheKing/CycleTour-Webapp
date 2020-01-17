@@ -58,8 +58,6 @@ class TourMap extends Component {
       })
       console.log(this.state.marker1)
     }
-    //this.forceUpdate();
-
   }
 
 

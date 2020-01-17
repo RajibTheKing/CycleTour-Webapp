@@ -34,7 +34,7 @@ class Routing extends MapLayer {
       lineOptions: {
         styles: [
           {
-            color: "red",
+            color: "blue",
             opacity: 0.6,
             weight: 4
           }
