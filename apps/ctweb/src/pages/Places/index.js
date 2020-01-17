@@ -84,7 +84,11 @@ class Places extends Component {
                       icon={fontAwesomeIcon}
                       onClick={this.onClickMaker.bind(this)}
                     >
-                    <Popup>{x.title}</Popup>
+                    <Popup>
+                      <p><strong>{x.title}</strong></p>
+                      <p>Website: { x.websites }</p>
+                      <Link to={'/place/' + x.id} >Details</Link>
+                    </Popup>
                   </Marker>
                 )
               })

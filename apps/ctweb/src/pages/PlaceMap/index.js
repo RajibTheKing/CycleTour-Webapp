@@ -94,7 +94,7 @@ class PlaceMap extends Component {
                     >
                     <Popup className="place-popup">
                       <p><strong>{x.title}</strong></p>
-                      <p>Website: { place.websites }</p>
+                      <p>Website: { x.websites }</p>
                       <p><a href={ctKielApi.siteUrl +'/place/' + x.id} target="_blank" >Details</a></p>
                     </Popup>
                   </Marker>
