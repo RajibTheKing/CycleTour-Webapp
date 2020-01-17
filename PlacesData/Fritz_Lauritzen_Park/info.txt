@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Fritz Lauritzen Park
+Type: park
+Location: 54.29230938164776, 10.182480812072752
+icon: fa-tree
+
+Place_information:
+
+Description: The Fritz-Lauritzen-Park is a green area in the Elmschenhagen district of the Schleswig-Holstein state capital Kiel . The park is located between Rüsterstraße, Egerstraße, Landskroner Weg, Reichenberger Allee and Elmschenhagener Allee and is approximately 6  hectares in size.
+
+address: Unnamed Road, 24146 Kiel
+webpage: None
+rating: 4.7

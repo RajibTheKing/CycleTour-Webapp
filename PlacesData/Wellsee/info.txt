@@ -1,0 +1,16 @@
+
+Places:
+
+Title: Wellsee
+Type: water
+Location: 54.280259747907145, 10.183897018432617
+icon: fa-water
+
+Place_information:
+
+Description: Without doubt one of the favorite lakes in Kiel you can visit during summer. Upon arrival, you will warmly welcomed by the breez of the air.  You can have two great evenings here, with bonfire & Tsheringma tea which obviously added up to the experience.
+The second day you can have experience a village trekking. You can truly walk the two of the side of this lake. The scenery is beautiful. This place is quiet and peaceful environment.
+
+address: 24145 Kiel
+webpage: None
+rating: 4.6

@@ -1,0 +1,22 @@
+
+Places:
+
+Title: Sum Sum indoor play park
+Type: kid
+Location: 54.295477774790534, 10.117238759994507
+icon: fa-child
+
+Place_information:
+
+Description: This includes, for example, the giant climbing frame, in which the kids search for the right way and master numerous tasks. Relaxing, on the other hand, is the bath in the ball pool, where even the little ones feel really comfortable. Rapid activities such as on the Ri-Ra roller slide, extensive jump sequences on the trampolines and testing the bouncy castles are other activities for the children.
+
+Together with their parents, the children play table tennis, darts, table football, air hockey in the SumSum Kiel or play billiards. Of course, children's computers should not be missing, where funny games are waiting. You get more sweaty when you play football together on your own football and basketball court, where fathers also like to show off their skills.
+
+The toddler area 
+
+The minis in the families prefer to stay in the separate toddler area, where they try out as little architects or live in a play house. But there are also many different means of transportation such as bobby cars, tricycles and bicycles.
+
+address: Krummbogen 77, 24113 Kiel
+
+webpage: https://www.sumsum-kiel.de
+rating: 4.1

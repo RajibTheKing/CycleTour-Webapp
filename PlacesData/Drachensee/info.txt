@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Drachensee
+Type: water
+Location: 54.29664237977145, 10.101521015167236
+icon: fa-water
+
+Place_information:
+
+Description: This is one place which will remain etched in my mind forever.The path leading up to this blessed lake is simply out of a movie. There is beautiful greenery all around, prayer flags fluttering in the breeze and the mesmerizing chants coming from the nearby monastery. Little stone stupas made by locals and tourists line the sides of the pathway and you can make one too with a little wish :) I had heard about the curative properties of this lake, but the amazing thing was that I had a personal experience and that is the reason this will remain one of the most memorable places I've visited.
+
+address: 24113 Kiel
+webpage: None
+rating: 5.0

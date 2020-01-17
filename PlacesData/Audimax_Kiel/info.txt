@@ -1,0 +1,16 @@
+
+Places:
+
+Title: Audimax
+Type: education
+Location: 54.33830228577832, 10.123740434646605
+icon: fa-school
+
+Place_information:
+
+Description: The Audimax building is fully illuminated with WirelessLAN. The radio networks "CAUx" (for employees and students of the CAU) and "eduroam" (for guests) are broadcast. Students automatically get access with their stu ID. Employees need a user ID for the data center and the "dial-in service". This service is also required for VPN use. Information on the CAU radio networks and their configuration can be found on the website of the data center.
+
+address: Christian-Albrechts-Platz 2, 24118 Kiel
+
+webpage: https://www.uni-kiel.de
+rating: 4.2

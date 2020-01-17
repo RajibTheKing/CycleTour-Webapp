@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Strand Hasselfelde
+Type: beach
+Location: 54.34407514587709, 10.175292491912842
+icon: fa-umbrella-beach
+
+Place_information:
+
+Description: The Hasselfelde beach has long been more than an insider tip on the east bank - especially since parking fees have been charged in neighboring Mönkeberg . However, the parking problems in Hasselfelde, especially on the street Zum Kesselort, are one of the reasons why the area has not yet been designated as an official bathing beach. Then there should be secured escape routes. Other obstacles: nature conservation and unclear contaminated sites. According to the city, the area was a military depot with a chemical-physical test facility until the Second World War, then a commercial site, shipwrecking yard and material warehouse of the Bundeswehr .
+
+address: Hasselfelde, 24149 Kiel
+webpage: None
+rating: 4.2

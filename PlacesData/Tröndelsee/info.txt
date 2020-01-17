@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Tröndelsee
+Type: water
+Location: 54.30485003226024, 10.17232060432434
+icon: fa-water
+
+Place_information:
+
+Description: Tröndelsee is a lake in Kiel, Schleswig-Holstein, Germany. At an elevation of 30 m, its surface area is 24 ha
+
+address: 24147 Kiel
+webpage: None
+rating: 5.0
