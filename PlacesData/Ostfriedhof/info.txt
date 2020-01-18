@@ -1,0 +1,14 @@
+
+Places:
+
+Title: Ostfriedhof
+Type: Cemetery
+Location: 54.31786247435757, 10.190012454986572
+icon: fa-tree
+Place_information:
+
+Description: The Ostfriedhof was created in 1909 as a cemetery for the communities Ellerbek and Wellingdorf, which at that time were not yet part of Kiel. In 1940 the city of Kiel took over the cemetery area directly on the city limits. Since the year 200 there has also been an Islamic burial ground in the East Cemetery.
+
+address: Klausdorfer Weg 277, 24148 Kiel
+webpage: None
+rating: 4.1

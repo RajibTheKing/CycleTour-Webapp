@@ -1,0 +1,14 @@
+
+Places:
+
+Title: Werft Park
+Type: park
+Location: 54.314320293087775, 10.157976150512695
+icon: fa-tree
+Place_information:
+
+Description: The Volkspark , originally called Werftpark , is a green area in the Ellerbek district of the Schleswig-Holstein state capital of Kiel . It is located southeast of the city center on the opposite side of the Kiel Fjord between Werftstrasse and the Ostring. The 15.2 hectare park area is around 500 meters long and 300 meters wide.With the determination of Kiel as the Imperial War Harbor in 1871, the cityscape and the east bank of the Kiel Fjord changed. Due to the growing large shipyards of Howaldtswerke, Germaniawerft and the Imperial Shipyard , the villages of Ellerbek and Gaarden changed from fishing villages to workers' settlements. The Volkspark was created by the welfare association for the members of the Imperial Shipyard as a shipyard park and recreation area for the shipyard employees.
+
+address: Ostring, 24148 Kiel
+webpage: theater-kiel.de
+rating: 4.4

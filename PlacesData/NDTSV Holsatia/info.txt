@@ -1,0 +1,16 @@
+
+Places:
+
+Title: NDTSV Holsatia
+Type: sport
+Location: 54.33180293919429, 10.192984342575073
+icon: fa-volleyball-ball
+Place_information:
+
+Description: The soccer division starts building a women's team and a walking football group. More information on this under "Categories / Football". 
+Tai Chi Gung in Kiel from now on !!! Start on Wednesday, January 8th, 2020 at 7.15 p.m. in the Holsaten-Halle, Strohredder 17, 24149 Kiel. More information in the poster in the scroll bar on the home page.
+
+
+address: Strohredder 17, 24149 Kiel
+webpage: ndtsv-holsatia.com
+rating: 4.1

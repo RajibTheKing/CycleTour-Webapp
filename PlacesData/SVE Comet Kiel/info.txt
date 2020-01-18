@@ -1,0 +1,15 @@
+
+Places:
+
+Title: SVE Comet Kiel
+Type: sport
+Location: 54.32458301893576, 10.19007682800293
+icon: fa-volleyball-ball
+Place_information:
+
+Description: The SC Comet Kiel from 1912 eV was a football club from Kiel . It was founded in 1912 in the independent municipality of Neumühlen-Dietrichsdorf , which was then just outside Kiel .Until 1922, the club was not part of the German Football Association. He took without the organization to belong to [1] , to the point playing the ATSB part. From 1942 to 1945 Comet played in the Gauliga Schleswig-Holstein with clubs such as Holstein Kiel and VfB Lübeck's predecessor SG OrPo Lübeck .
+After the Second World War, the game began in the then first-class district championship round SH Ost A and in the 1947/48 season the club was the co-founder of today's Schleswig-Holstein League , which began in three seasons under the name of the Landesliga . 
+
+address: Passader Str. 16, 24148 Kiel
+webpage: None
+rating: 4.0
