@@ -95,11 +95,11 @@ class Places extends Component {
             }
             <GeoJSON data={areaData} />
         </Map>
-        <section className="py-6 bg-gray-100 tour-list">
+        <section className="py-6 bg-gray-100 place-list">
             <div className="container">
                 <div className="text-center pb-lg-4">
                     <p className="subtitle text-secondary">Explore the beauty of Kiel </p>
-                    <h2 className="mb-5">Popular Places</h2>
+                    <h2 className="mb-5">Places of Kiel</h2>
                 </div>
                 <div className="row">
                   {

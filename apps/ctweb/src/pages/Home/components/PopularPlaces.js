@@ -31,7 +31,7 @@ class PopularPlaces extends React.Component{
         const {places} = this.state
 
         return(
-            <section className="py-6 bg-gray-100 tour-list">
+            <section className="py-6 bg-gray-100 place-list">
                 <div className="container">
                     <div className="text-center pb-lg-4">
                         <p className="subtitle text-secondary">Explore the beauty of Kiel </p>
@@ -61,7 +61,7 @@ class PopularPlaces extends React.Component{
                     </div>
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <Link to="/kiel" className="btn btn-primary btn-block btn-tour">View All Places</Link>
+                            <Link to="/kiel" className="btn btn-primary btn-block btn-place">View All Places</Link>
                         </div>
                     </div>
                 </div>
