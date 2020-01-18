@@ -5,7 +5,7 @@ import ctKielApi from './../../helpers/ctKielApi'
 import axios from 'axios'
 
 import Routing from "./components/Routing";
-import {areaData} from './components/areaData';
+import {areaData} from './../../helpers/areaData';
 
 class TourMap extends Component {
   constructor(props) {

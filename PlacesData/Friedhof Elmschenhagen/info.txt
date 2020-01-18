@@ -11,5 +11,5 @@ Place_information:
 Description: Cemetery for Elmschenhagen in Kiel, Germany. The cemetery is adjacent to the Maria-Magdelenen-Kirche Lutheran church. The cemetery has an area for victims of World War II aerial bombings in Kiel. The cemetery was dedicated on 30 November 1872 and is administered by the Evangelisch-Lutherischer Kirchenkreis Altholstein.
 
 address: Ev.-Luth. Kirchenkreis Altholstein, Elmschenhagener Allee 4, 24146 Kiel
-webpage: friedhof-kiel.de
+webpage: www.friedhof-kiel.de
 rating: 4.8
