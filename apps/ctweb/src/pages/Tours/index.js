@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import axios from 'axios'
 import ctKielApi from './../../helpers/ctKielApi'
 import {Link} from 'react-router-dom'
@@ -32,7 +32,7 @@ class Tours extends Component {
 	render() {
 		
 		return (
-			<section className="py-6 bg-gray-100 tour-list">
+			<section className="py-6 bg-gray-100">
                 <div className="container">
                     <div className="text-center pb-lg-4">
                         <p className="subtitle text-secondary">Explore the beauty of Kiel </p>

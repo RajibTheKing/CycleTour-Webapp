@@ -67,7 +67,7 @@ class TourMap extends Component {
     console.log("Inside Render", this.state.markers);
     
     return (
-      <Map center={position} zoom={zoom} ref={this.saveMap}>
+      <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={false}>
         
           
           <TileLayer

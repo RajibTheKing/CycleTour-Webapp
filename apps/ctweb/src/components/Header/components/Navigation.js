@@ -8,27 +8,8 @@ import {setLogout} from './../../../actions/index'
 
 class Navigation extends React.Component{
 
-    constructor(props){
-        super(props)
-        this.theLogoutHandle = this.theLogoutHandle.bind(this)
-    }
-
-    theLogoutHandle(e){
-        e.preventDefault();
-
-        localStorage.removeItem('userAuth')
-
-        this.props.onSetLogout(false)
-        
-        return(
-            <Redirect to="/login" />
-        )
-    }
-
     render(){
 
-        const { userAuth } = this.props.state
-        
         return(
             <div id="navbarCollapse" className="collapse navbar-collapse">
                 <Nav className="navbar-nav ml-auto">
@@ -36,7 +17,7 @@ class Navigation extends React.Component{
                         <NavLink to="/" className="nav-link">Home</NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <NavLink to="/tours" className="nav-link">Tour Maps</NavLink>
+                        <NavLink to="/tours" className="nav-link">Bike Tours</NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
                         <NavLink to="/kiel" className="nav-link">Places of Kiel</NavLink>
@@ -53,18 +34,4 @@ class Navigation extends React.Component{
     }
 }
 
-const mapStateToProps = (state) => {
-    return{
-        state: state
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return{
-        onSetLogout:(isLogin) =>{
-            dispatch(setLogout(isLogin))
-        }
-    }
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navigation));
+export default withRouter(Navigation);
