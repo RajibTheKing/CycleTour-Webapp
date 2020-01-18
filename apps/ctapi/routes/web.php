@@ -22,6 +22,7 @@ $router->group(
         'prefix' => 'v1/places'
     ], function () use ($router) {
         $router->get('/',  ['uses' => 'PlaceController@showAllPlaces']);
+        $router->get('/popular', ['uses' => 'PlaceController@showPopularPlaces']);
         $router->get('/{id}', ['uses' => 'PlaceController@showPlaceById']);
 });
 

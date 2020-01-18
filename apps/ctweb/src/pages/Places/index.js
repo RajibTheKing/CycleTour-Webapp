@@ -2,7 +2,6 @@ import React, { Component, createRef } from "react";
 import L from 'leaflet'
 import { Map, TileLayer, withLeaflet, MapControl, Popup, Marker, Polyline, Pane, GeoJSON } from "react-leaflet";
 import ctKielApi from '../../helpers/ctKielApi'
-import Routing from "./components/Routing";
 import {areaData} from './../../helpers/areaData';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
@@ -38,6 +37,7 @@ class Places extends Component {
   componentDidMount() {
     
     const url = ctKielApi.URL + '/places'
+
     axios.get(url).then(response => response.data)
     .then((data) => {
         this.setState({

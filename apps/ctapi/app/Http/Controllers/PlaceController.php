@@ -23,6 +23,21 @@ class PlaceController extends Controller
         ], 200);
     }
 
+    public function showPopularPlaces(){
+
+        $places = DB::table('places')
+                    ->join('place_infomation', 'place_infomation.place_id', '=', 'places.id')
+                    ->select(DB::raw('places.*, place_infomation.*'))
+                    ->orderBy('place_infomation.rating', 'ASC')
+                    ->limit(3)
+                    ->get();
+
+        return response()->json([
+            'places' => $places,
+            'message' => 'Success'
+        ], 200);
+    }
+
     public function showPlaceById($id){
 
 

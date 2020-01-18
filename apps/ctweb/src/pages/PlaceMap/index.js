@@ -4,7 +4,6 @@ import { Map, TileLayer, withLeaflet, MapControl, Popup, Marker, Polyline, Pane,
 import ctKielApi from './../../helpers/ctKielApi'
 import {areaData} from './../../helpers/areaData';
 import axios from 'axios'
-import {Link} from 'react-router-dom'
 import Image from './../../helpers/Image'
 
 class PlaceMap extends Component {
@@ -120,7 +119,7 @@ class PlaceMap extends Component {
 							<p>{place.description}</p>
 							<p>Type: <i className={'fa '+ place.marker}></i></p>
 							{
-								place.websites &&
+								place.websites && place.websites !== 'None' &&
 								<p>Website: <a href={place.websites} target="_blank">{place.websites}</a></p>
 							}
 						</div>
