@@ -66,7 +66,7 @@ class Routing extends MapLayer {
 
 
       var myMovingMarker = L.Marker.movingMarker([wapointList[0],wapointList[0]],[1]);
-      e.routes[0].coordinates.map(x =>{ console.log(x); myMovingMarker.addLatLng(x, [200]); });
+      e.routes[0].coordinates.map(x =>{ myMovingMarker.addLatLng(x, [200]); });
       myMovingMarker.addTo(map.leafletElement);
 
       

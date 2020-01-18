@@ -36,6 +36,7 @@ class TourController extends Controller
 
         return response()->json([
             'spots' => $spots,
+            'tour' => Tour::find($id),
             'message' => 'Success'
         ], 200);
     }

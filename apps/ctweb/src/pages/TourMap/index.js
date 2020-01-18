@@ -3,7 +3,7 @@ import L from 'leaflet'
 import { Map, TileLayer, withLeaflet, MapControl, Popup, Marker, Polyline, Pane, GeoJSON } from "react-leaflet";
 import ctKielApi from './../../helpers/ctKielApi'
 import axios from 'axios'
-
+import Image from './../../helpers/Image'
 import Routing from "./components/Routing";
 import {areaData} from './../../helpers/areaData';
 
@@ -27,10 +27,13 @@ class TourMap extends Component {
 		const url = ctKielApi.URL + '/tours/map/'+id
 		axios.get(url).then(response => response.data)
 		.then((data) => {
-		  const markerData = data.spots.map(x => { return {lat : x.lat, lng : x.lon}})
-		  
+			
+			console.log('Tour data' , data.tour);
+			
+			  const markerData = data.spots.map(x => { return {lat : x.lat, lng : x.lon}})  
 			this.setState({
-				markers: markerData
+				markers: markerData,
+				tour: data.tour
 			})
 		}).catch(function (error) {
 			console.log(error);
@@ -56,36 +59,67 @@ class TourMap extends Component {
       this.setState({
         marker1: marker.leafletElement.getLatLng(),
       })
-      console.log(this.state.marker1)
     }
   }
 
 
   render() {
-    const { lat, lng, zoom } = this.state;
+    const { lat, lng, zoom, tour } = this.state;
     const position = [lat, lng];
     console.log("Inside Render", this.state.markers);
     
     return (
-      <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={false}>
-        
-          
-          <TileLayer
-            url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-          />
+      <div className="clearfix">
+        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={false}>
+    
+			<TileLayer
+				url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
+				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+			/>
+			<TileLayer
+				url="http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"
+				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+			/>
+			{
+				this.state.isMapInit && this.state.markers.length > 0?
+					<Routing map={this.map} markers={this.state.markers}/>
+				:''
+			}
 
-          <TileLayer
-            url="http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-          />
-          {this.state.isMapInit && this.state.markers.length > 0?
-            <Routing map={this.map} markers={this.state.markers}/>
-            :''
-          }
-
-          <GeoJSON data={areaData} />
-      </Map>
+			<GeoJSON data={areaData} />
+		</Map>
+		<section className="py-6 bg-gray-100">
+			<div className="container">
+				<div className="text-center pb-lg-4">
+					<p className="subtitle text-secondary">Explore the beauty of Kiel </p>
+					{
+						tour &&
+						<h2 className="mb-5">{tour.title}</h2>
+					}
+				</div>
+				{
+				tour &&
+				<div className="row justify-content-md-center">
+					<div className="col-lg-5">
+						<div className="place-information">
+							<p>{tour.description}</p>
+							<ul>
+								<li>Start Point: {tour.start_point}</li>
+								<li>Start Point: {tour.end_point}</li>
+								<li>Tour Duration: {tour.duration}</li>
+								<li>Highlights : {tour.major_spots}</li>
+							</ul>
+						</div>
+					</div>
+					<div className="col-lg-5">
+						<Image src={'/images/tours/'+tour.image} alt={tour.title} class="img-fluid" />
+					</div>
+				</div>
+				}
+			</div>
+		</section>
+      </div>
+      
     );
   }
 }
