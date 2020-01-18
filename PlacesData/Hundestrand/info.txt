@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Hundestrand
+Type: beach
+Location: 54.407991440365706, 10.188531875610352
+icon: fa-umbrella-beach
+
+Place_information:
+
+Description: The Baltic Sea is one of the most popular travel destinations in Germany - especially for dog owners. Whoever travels with his four-legged friend also pays attention to the most stress-free arrival possible and the dog-friendliness on site .
+Since the journey to the Baltic Sea with a dog is usually quite comfortable with your own car, many dog ​​owners love the coastal region. But also the many offers for holiday apartments and holiday homes, in which dogs are allowed, as well as the proximity to nature, make the Baltic Sea the ideal travel destination with a dog. A camping holiday is particularly attractive for dogs and owners, especially near a dog beach.
+address: 24159 Kiel
+webpage: None
+rating: 3.4

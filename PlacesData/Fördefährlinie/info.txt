@@ -1,0 +1,16 @@
+
+Places:
+
+Title: Fördefährlinie
+Type: Ferry service
+Location: 54.34625148507249, 10.152482986450195
+icon: fa-ship
+
+Place_information:
+
+Description: Public transport on the water from March to October: from the Kieler Bahnhofsbrücke over the landing stages Seegarten, Reventlou, Bellevue, Mönkeberg, Möltenort, Friedrichsort to Laboe. In the summer months from May to early September, Falckenstein, Schilksee and Strande are also visited.
+In the winter months from October to March, the F1 only drives on the so-called winter triangle, ie from Möltenort to Friedrichsort and Laboe and back.
+The ship takes a 15-minute break in Friedrichsort to transport all students from the west to the east bank after school.
+address: Bellevue-Brücke, Kiel
+webpage: sfk-kiel.de
+rating: 4.4

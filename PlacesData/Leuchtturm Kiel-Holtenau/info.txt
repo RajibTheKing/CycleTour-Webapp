@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Leuchtturm Kiel-Holtenau
+Type: Tourist attraction
+Location: 54.36965860471604, 10.152826309204102
+icon: fa-archway
+
+Place_information:
+
+Description: The predecessor of the lighthouse stood directly in front of the canal packing house in Holtenau and marked the entrance to the Eider Canal , the predecessor of the Kiel Canal , for a few years .
+The current Holtenau lighthouse was built on a small hill made of excavated material from the Kiel Canal, which was heaped up in front of the original bank. The lighthouse was built by the Kiel company Rower. The height of the Holtenau lighthouse is 20 meters, including the beacon 24 meters. The nominal range of its beacon for white is 11, for red 9 and for green 8  nautical miles .
+address: Tiessenkai, 24159 Kiel
+webpage: None
+rating: 4.5

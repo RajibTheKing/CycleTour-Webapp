@@ -1,0 +1,14 @@
+
+Places:
+
+Title: FKK-Strand Falkenstein
+Type: beach
+Location: 54.41424773673992, 10.183618068695068
+icon: fa-beach
+
+Place_information:
+
+Description: On this page you will find an overview map of the nudist beaches along the German Baltic Sea coast. The selection focuses on the most beautiful vacation spots on the coast and should help you find your favorite nudist beach for a relaxing Baltic Sea vacation.
+address: 24159, Unnamed Road, 24159 Kiel
+webpage: None
+rating: 3.8

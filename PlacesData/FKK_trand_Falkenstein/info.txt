@@ -1,0 +1,14 @@
+
+Places:
+
+Title: FKK-Strand Falkenstein
+Type: beach
+Location: 54.41412286990141, 10.185163021087646
+icon: fa-umbrella-beach
+
+Place_information:
+
+Description: The submarine bunker Kilian on the site of the Kiel War Shipyard (from 1943: Howaldtswerke Kiel ) was built between 1941 and 1943 on the northern bank of the Schwentine estuary in Kiel-Dietrichsdorf using forced labor and was put into operation as a submarine bunker .
+address: 24159, Unnamed Road, 24159 Kiel
+webpage: http://www.mahnmalkilian.de/flandernbunker.html
+rating: 4.2

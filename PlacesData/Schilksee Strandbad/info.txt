@@ -1,0 +1,15 @@
+
+Places:
+
+Title: Schilksee Strandbad
+Type: beach
+Location: 54.423574214352065, 10.17308235168457
+icon: fa-umbrella-beach
+
+Place_information:
+
+Description: The Kiel suburb of Schilksee offers 800 m of fine sandy beach, which became known through the 1972 Olympic Games when the Olympic Center Schilksee was built here.
+The Schilksee lido is romantically situated on the west bank of the Kiel Fjord. Due to the protected location, the water is not as strongly moved as on other beaches of the Baltic Sea and is therefore ideal for families with children, since the little ones can dig to their heart's content in the fine sand and splash and play in the shallow water.
+address: Hohes Ufer, 24159 Kiel
+webpage: None
+rating: 4.4

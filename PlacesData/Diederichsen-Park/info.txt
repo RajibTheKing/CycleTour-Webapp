@@ -1,0 +1,16 @@
+
+Places:
+
+Title: Diederichsen-Park
+Type: park
+Location: 54.34830264181319, 10.14686107635498
+icon: fa-tree
+
+Place_information:
+
+Description: The Diederichsenpark is located in Kiel - Düsternbrook in Schleswig-Holstein . It can be reached in public transport via the Diederichsenpark bus stop and is on the list of landscape conservation areas in the city of Kiel .The park area, which is now 4.5 hectares , belonged to a fruit tree nursery built in 1784. Fruit trees grown here were distributed free of charge to improve the food supply of the population. Today, among ot
+18her things, walnut trees grow here .
+66-1868 Heinrich Adolph Meyer and his wife Marie née Toberentz built the Villa Forsteck on the site of today's Diederichsenpark. The foundations can still be seen today. The builders represented the ideas of the 1848 democracy movement.
+address: 24105 Kiel
+webpage: None
+rating: 4.7
