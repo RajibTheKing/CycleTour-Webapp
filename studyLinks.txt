@@ -43,3 +43,8 @@ https://routing.openstreetmap.de/?z=12&center=54.344450%2C10.179520&loc=54.35912
 
 
 
+
+
+PostGreSql:
+https://www.godaddy.com/garage/how-to-install-postgresql-on-ubuntu-14-04/
+https://www.guru99.com/postgresql-create-database.html
