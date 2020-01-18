@@ -3,6 +3,8 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import "lrm-graphhopper"
 import { withLeaflet } from "react-leaflet";
+import "./MovingMarker"
+
 
 class Routing extends MapLayer {
 
@@ -44,9 +46,51 @@ class Routing extends MapLayer {
       draggableWaypoints: true,
       fitSelectedRoutes: false,
       showAlternatives: false,
+      routeWhileDragging: true,
+      snakingSpeed: 200,
+      animate:true,
     }).addTo(map.leafletElement);
 
+    leafletElement.on('routesfound', function (e) {
+      let distance = e.routes[0].summary.totalDistance;
+      console.log('routing distance: ' + distance);
+      console.log('look inside: ', e.routes);
+
+
+      var cusTomIcon = L.icon({
+        iconUrl: 'bikeIconMarker.png',
+      });
+
+      
+
+
+
+      var myMovingMarker = L.Marker.movingMarker([wapointList[0],wapointList[0]],[1]);
+      e.routes[0].coordinates.map(x =>{ console.log(x); myMovingMarker.addLatLng(x, [200]); });
+      myMovingMarker.addTo(map.leafletElement);
+
+      
+      
+      //var myMovingMarker2 = L.Marker.movingMarker([wapointList[1],wapointList[2]],[20000]).addTo(map.leafletElement);
+
+      myMovingMarker.start();
+      
+    });
+
+    console.log("look at leaflet", leafletElement);
+    console.log("TheKing--> Done");
+
+
+    //var route = L.layerGroup([
+    //  L.marker(wapointList[0]),
+    //  L.polyline([wapointList[0], wapointList[3]]),
+    //  L.marker(wapointList[3])
+    //], { snakingPause: 200 });
+    //console.log(route);
+    //route.addTo(map.leafletElement).snakeIn();
+
     
+
 
     return leafletElement.getPlan();
   }
