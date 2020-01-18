@@ -40,7 +40,6 @@ class PlaceController extends Controller
 
     public function showPlaceById($id){
 
-
         $place = DB::table('places')
                     ->join('place_infomation', 'place_infomation.place_id', '=', 'places.id')
                     ->select(DB::raw('places.*, place_infomation.*'))

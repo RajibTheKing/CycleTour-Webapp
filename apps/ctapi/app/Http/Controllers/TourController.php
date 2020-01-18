@@ -25,6 +25,13 @@ class TourController extends Controller
         ], 200);
     }
 
+    public function showPopularTours(){
+        return response()->json([
+            'tours' => Tour::offset(0)->limit(10)->get(),
+            'message' => 'Success'
+        ], 200);
+    }
+
     public function showSpotsByTourId($id){
 
         $spots = DB::table('tour_spots')

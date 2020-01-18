@@ -31,6 +31,7 @@ $router->group(
         'prefix' => 'v1/tours'
     ], function () use ($router) {
         $router->get('/',  ['uses' => 'TourController@showAllTours']);
+        $router->get('/popular', ['uses' => 'TourController@showPopularTours']);
         $router->get('/{id}', ['uses' => 'TourController@showTourById']);
         $router->get('map/{id}', ['uses' => 'TourController@showSpotsByTourId']);
 });

@@ -1,14 +1,14 @@
 import React from 'react';
-import Places from './Places'
-import TourMaps from './TourMaps'
+import PopularPlaces from './PopularPlaces'
+import PopularTours from './PopularTours'
 
 class ServiceStatic extends React.Component{
 
     render(){
         return(
             <div>
-                <TourMaps />
-                <Places />
+                <PopularTours />
+                <PopularPlaces />
             </div>
         )
     }

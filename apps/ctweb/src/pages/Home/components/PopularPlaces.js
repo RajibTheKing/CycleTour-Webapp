@@ -1,17 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import Image from './../../../helpers/Image'
-import ctKielApi from './../../../helpers/ctKielApi'
+import Image from '../../../helpers/Image'
+import ctKielApi from '../../../helpers/ctKielApi'
 import axios from 'axios'
 
 
-class Places extends React.Component{
+class PopularPlaces extends React.Component{
     constructor() {
         super();
         this.state = {
             places:[]
         };
-      }
+    }
 
     componentDidMount() {
     
@@ -25,7 +25,7 @@ class Places extends React.Component{
         }).catch(function (error) {
             console.log(error);
         })
-      }
+    }
 
     render(){
         const {places} = this.state
@@ -70,4 +70,4 @@ class Places extends React.Component{
     }
 }
 
-export default Places
+export default PopularPlaces
