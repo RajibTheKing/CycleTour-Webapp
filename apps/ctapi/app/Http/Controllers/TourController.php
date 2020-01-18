@@ -38,7 +38,7 @@ class TourController extends Controller
                     ->join('places', 'places.id', '=', 'tour_spots.place_id')
                     ->select(DB::raw('tour_spots.*, places.*'))
                     ->where('tour_spots.tour_id', '=', $id)
-                    ->orderBy('places.geom')
+                    ->orderBy('tour_spots.id','ASC')
                     ->get();
 
         return response()->json([

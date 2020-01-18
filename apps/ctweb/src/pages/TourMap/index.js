@@ -28,7 +28,7 @@ class TourMap extends Component {
 		axios.get(url).then(response => response.data)
 		.then((data) => {
 			
-			console.log('Tour data' , data.tour);
+			console.log('Tour data' , data.spots);
 			
 			  const markerData = data.spots.map(x => { return {lat : x.lat, lng : x.lon}})  
 			this.setState({
@@ -70,7 +70,7 @@ class TourMap extends Component {
     
     return (
       <div className="clearfix">
-        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={false}>
+        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true}>
     
 			<TileLayer
 				url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
