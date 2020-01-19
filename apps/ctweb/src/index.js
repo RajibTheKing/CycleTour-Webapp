@@ -1,25 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 
-import './css/nouislider.css';
 import './css/swiper.min.css';
 import './css/style.css';
 import './css/custom.css';
 import App from './App';
-import fkReducer from './reducers/index'
-
-const store = createStore(fkReducer)
 
 
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <Provider store={store}>
         <App />
-    </Provider>
 ,
 document.getElementById('root')
 );

@@ -1,9 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import { NavLink, withRouter } from 'react-router-dom';
 import { Nav, NavItem } from 'reactstrap';
-import {Redirect} from 'react-router-dom';
-import {setLogout} from './../../../actions/index'
 
 
 class Navigation extends React.Component{

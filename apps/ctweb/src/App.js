@@ -8,11 +8,6 @@ import TourMap from './pages/TourMap/index'
 import Tours from './pages/Tours/index'
 import Places from './pages/Places/index'
 import PlaceMap from './pages/PlaceMap/index'
-import Bikes from './pages/Bikes/index'
-import BikeSingle from './pages/BikeSingle/index';
-import Profile from './pages/Users/Components/Profile'
-import Login from './pages/Users/Components/Login'
-import Register from './pages/Users/Components/Register'
 
 
 
@@ -23,14 +18,10 @@ function App() {
 			<BrowserRouter>
 				<Header />
 				<Route exact path="/" component={Home} />
-				<Route path="/bikes" component={Bikes} />
 				<Route path="/tours" component={Tours} />
 				<Route path="/tour/:id" component={TourMap} />
-				<Route path="/bike/:id" component={BikeSingle} />
 				<Route path="/kiel" component={Places} />
 				<Route path="/place/:id" component={PlaceMap} />
-				<Route path="/register" component={Register} />
-				<Route path="/profile" component={Profile} />
 				<Footer/>
 			</BrowserRouter>
 			
