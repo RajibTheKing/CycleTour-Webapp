@@ -3,12 +3,26 @@ import axios from 'axios'
 import ctKielApi from './../../helpers/ctKielApi'
 import {Link} from 'react-router-dom'
 import Image from './../../helpers/Image'
+import { ClipLoader, DotLoader, BarLoader, PropagateLoader } from "react-spinners";
+import { css } from "@emotion/core";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  z-index: 1000;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+`;
+
 
 class Tours extends Component {
 
 	constructor() {
 		super();
 		this.state = {
+          loading: true,
 		  tours: []
 		}
 	}
@@ -22,7 +36,8 @@ class Tours extends Component {
 		  console.log(data);
 		  
 			this.setState({
-				tours: data.tours
+                tours: data.tours,
+                loading: false,
 			})
 		}).catch(function (error) {
 			console.log(error);
@@ -34,6 +49,12 @@ class Tours extends Component {
 		return (
 			<section className="py-6 bg-gray-100">
                 <div className="container">
+                    <PropagateLoader
+                        css={override}
+                        //size={"150px"} this also works
+                        color={"#123abc"}
+                        loading={this.state.loading}
+                    />
                     <div className="text-center pb-lg-4">
                         <p className="subtitle text-secondary">Explore the beauty of Kiel </p>
                         <h2 className="mb-5">Our Tours</h2>

@@ -8,10 +8,26 @@ import {Link} from 'react-router-dom'
 import Image from '../../helpers/Image'
 import CTMakers from './../../helpers/CTMakers'
 
+import { ClipLoader, DotLoader, BarLoader, PropagateLoader } from "react-spinners";
+import { css } from "@emotion/core";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  z-index: 1000;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+`;
+
+
+
 class Places extends Component {
   constructor() {
     super();
     this.state = {
+      loading: true,
       lat: 54.34,
       lng: 10.13,
       zoom: 11,
@@ -42,7 +58,8 @@ class Places extends Component {
     axios.get(url).then(response => response.data)
     .then((data) => {
         this.setState({
-            places: data.places
+            places: data.places,
+            loading: false,
         })
     }).catch(function (error) {
         console.log(error);
@@ -59,6 +76,12 @@ class Places extends Component {
 
     return (
       <div className="clearfix">
+        <PropagateLoader
+            css={override}
+            //size={"150px"} this also works
+            color={"#123abc"}
+            loading={this.state.loading}
+          />
 
         <Map center={position} className="place-maps" zoom={zoom}>
             <TileLayer

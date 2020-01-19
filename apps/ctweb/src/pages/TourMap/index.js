@@ -8,10 +8,25 @@ import Routing from "./components/Routing";
 import {areaData} from './../../helpers/areaData';
 import CTMakers from './../../helpers/CTMakers'
 
+import { ClipLoader, DotLoader, BarLoader, PropagateLoader } from "react-spinners";
+import { css } from "@emotion/core";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  z-index: 1000;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+`;
+
+
 class TourMap extends Component {
   constructor(props) {
     super();
     this.state = {
+	  loading: true,
       lat: 54.32313137415068,
       lng: 10.139522552490234,
       zoom: 12,
@@ -53,7 +68,8 @@ class TourMap extends Component {
 				tour: data.tour,
 				places: data.places,
 				lat: markerData[midSpot].lat,
-				lng: markerData[midSpot].lng
+				lng: markerData[midSpot].lng,
+				loading: false,
 			})
 		}).catch(function (error) {
 			console.log(error);
@@ -90,6 +106,12 @@ class TourMap extends Component {
     
     return (
       <div className="clearfix tour-map-single">
+		  <PropagateLoader
+            css={override}
+            //size={"150px"} this also works
+            color={"#123abc"}
+            loading={this.state.loading}
+          />
         <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true}>
     
 			<TileLayer
