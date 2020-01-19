@@ -56,17 +56,17 @@ class Routing extends MapLayer {
       console.log('routing distance: ' + distance);
       console.log('look inside: ', e.routes);
 
-
       var cusTomIcon = L.icon({
-        iconUrl: 'bikeIconMarker.png',
+        iconUrl: '/images/bikeIconMarker.png',
+        iconSize: [40, 40],
       });
 
       
 
 
 
-      var myMovingMarker = L.Marker.movingMarker([wapointList[0],wapointList[0]],[1]);
-      e.routes[0].coordinates.map(x =>{ myMovingMarker.addLatLng(x, [200]); });
+      var myMovingMarker = L.Marker.movingMarker([wapointList[0],wapointList[0]],[1], {icon: cusTomIcon});
+      e.routes[0].coordinates.map(x =>{ myMovingMarker.addLatLng(x, [20]); });
       myMovingMarker.addTo(map.leafletElement);
 
       
