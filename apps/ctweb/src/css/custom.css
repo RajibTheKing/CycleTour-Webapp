@@ -21,8 +21,8 @@ body{
 }
 
 .bc-image-1{
-    background-image: url(../img/banner.jpg);
-    width: 1440px;
+    background-image: url(../img/bannerSVG.svg);
+    width: 100%;
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
     transition-duration: 2000ms;
