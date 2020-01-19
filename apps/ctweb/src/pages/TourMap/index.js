@@ -100,9 +100,9 @@ class TourMap extends Component {
 				{
 				tour &&
 				<div className="row justify-content-md-center">
-					<div className="col-lg-5">
+					<div className="col-lg-6">
 						<div className="place-information">
-							<p>{tour.description}</p>
+							<div className="place-info-text" dangerouslySetInnerHTML={{__html: tour.description}} />
 							<ul>
 								<li>Start Point: {tour.start_point}</li>
 								<li>Start Point: {tour.end_point}</li>
@@ -111,7 +111,7 @@ class TourMap extends Component {
 							</ul>
 						</div>
 					</div>
-					<div className="col-lg-5">
+					<div className="col-lg-4">
 						<Image src={'/images/tours/'+tour.image} alt={tour.title} class="img-fluid" />
 					</div>
 				</div>

@@ -155,3 +155,12 @@ section.place-list{
 .leaflet-popup-content p{
     margin: 5px;
 }
+
+.place-information{
+    font-weight: 300;
+}
+
+.place-info-text p{
+    font-size: 15px;
+    line-height: 24px;
+}
