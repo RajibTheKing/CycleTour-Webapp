@@ -13,7 +13,7 @@ class TourController extends Controller
     public function showAllTours(){
 
         return response()->json([
-            'tours' => Tour::all(),
+            'tours' => Tour::orderBy('id','ASC')->get(),
             'message' => 'Success'
         ], 200);
     }
@@ -27,7 +27,7 @@ class TourController extends Controller
 
     public function showPopularTours(){
         return response()->json([
-            'tours' => Tour::offset(0)->limit(10)->get(),
+            'tours' => Tour::offset(0)->limit(3)->orderBy('id','ASC')->get(),
             'message' => 'Success'
         ], 200);
     }

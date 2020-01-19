@@ -111,7 +111,8 @@ section.place-list{
     background: #e9e5e0!important;
 }
 
-.place_grid_item{
+.place_grid_item,
+.tour-grid-item{
     margin-bottom: 30px;
 }
 

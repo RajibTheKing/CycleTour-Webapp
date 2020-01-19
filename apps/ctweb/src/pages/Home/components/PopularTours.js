@@ -62,7 +62,6 @@ class PopularTours extends React.Component{
                             })
                         }
                     </div>
-                    <div className="clearfix" style={{height:'30px'}}></div>
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <Link to="/tours" className="btn btn-primary btn-block btn-tour">View All Tours</Link>
