@@ -1,0 +1,16 @@
+
+Places:
+
+Title: Kieler Yacht Club
+Type: park
+Location: 54.33958451867062, 10.156710147857664
+icon: fa-tree
+Place_information:
+
+Description: Kieler Yacht-Club (Kiel Yacht Club) is one of the oldest yacht clubs in Germany. It is located in the harbor city of Kiel.
+This club is well known for some of the yacht racing events it organizes. The main one is the yearly Kieler Woche (Kiel Week), which is perhaps the biggest sailing event in the world.
+In 1972, when the Olympic Games were held in Munich, the Olympic sailing competitions took place in the Kiel Bay and this yacht club had a major role in their organization.
+
+address: Kiellinie 70, 24105 Kiel
+webpage: kyc.de
+rating: 4.1
