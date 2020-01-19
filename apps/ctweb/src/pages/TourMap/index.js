@@ -27,12 +27,33 @@ class TourMap extends Component {
     
 		const url = ctKielApi.URL + '/tours/map/'+id
 		axios.get(url).then(response => response.data)
-		.then((data) => {			
-			const markerData = data.spots.map(x => { return {lat : x.lat, lng : x.lon}})
+		.then((data) => {		
+
+			const markerData = []
+			const spotsIds = []
+			data.spots.map(x => {
+				markerData.push({lat : x.lat, lng : x.lon})
+				spotsIds.push(x.place_id)
+			})
+
+			data.places.map(x =>{
+
+				if (spotsIds.includes(x.id)){
+					x.current = true
+				} else{
+					x.current = false
+				}
+				return x;
+			})
+
+			const midSpot = Math.floor(markerData.length/2)
+
 			this.setState({
 				markers: markerData,
 				tour: data.tour,
-				places: data.places
+				places: data.places,
+				lat: markerData[midSpot].lat,
+				lng: markerData[midSpot].lng
 			})
 		}).catch(function (error) {
 			console.log(error);

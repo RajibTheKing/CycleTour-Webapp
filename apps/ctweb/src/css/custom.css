@@ -36,14 +36,6 @@ body{
     max-height: 240px;
 }
 
-.date-control{
-    padding-right: 5px!important;
-}
-
-#booking-form .react-datepicker__input-container{
-    display: block;
-}
-
 .leaflet-container{
     height: calc(600px);
 }
@@ -136,13 +128,17 @@ section.place-list{
 }
 
 .myDivIcon {
-    font-size : 20px;
+    font-size : 18px;
     color: #E83E8C;
 }
 
 .myDivIcon.current-place{
     font-size: 30px;
-    color: green;
+    color: #005A0A;
+}
+
+.myDivIcon.route-places{
+    color: #005A0A;
 }
 
 .place-maps.leaflet-container{

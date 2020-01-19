@@ -22,7 +22,7 @@ class Routing extends MapLayer {
 
     const routeMarker = L.icon({
       iconUrl: '/images/checkpoint.png',
-      iconSize: [20, 20],
+      iconSize: [0, 0],
     });
     
     const cusTomIcon = L.icon({
@@ -39,7 +39,6 @@ class Routing extends MapLayer {
     let leafletElement = new L.Routing.Control({
       waypoints: wapointList,
       createMarker: function(i, point, n){
-        console.log("try to check ", point);
 
         return L.marker(point.latLng, {
                draggable: true,
@@ -55,9 +54,9 @@ class Routing extends MapLayer {
       lineOptions: {
         styles: [
           {
-            color: "red",
-            opacity: 0.6,
-            weight: 4
+            color: "#ed4f00",
+            opacity: .8,
+            weight: 5
           }
         ]
       },

@@ -74,14 +74,14 @@ class PlaceMap extends Component {
             {
               this.state.places &&
               this.state.places.map((x,i) => {
-				  var currentPlace = ''
-				  if(x.id == place.id){
-					  var currentPlace= ' current-place'
-				  }
+				var currentPlace = ''
+				if(x.id == place.id){
+					var currentPlace= ' current-place'
+				}
                 const fontAwesomeIcon = L.divIcon({
-                  html: '<i class="fa ' + x.marker + '"></i>',
-                  iconSize: [40, 40],
-				  className: 'myDivIcon' + currentPlace
+					html: '<i class="fa ' + x.marker + '"></i>',
+					iconSize: [40, 40],
+					className: 'myDivIcon' + currentPlace
                 });
                 
                 return(

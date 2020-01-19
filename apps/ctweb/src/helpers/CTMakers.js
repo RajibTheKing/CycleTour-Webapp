@@ -15,10 +15,16 @@ class CTMakers extends Component{
                 {
                     places &&
                     places.map((x,i) => {
+
+                        var currentPlace = ''
+                        if(x.current){
+                            var currentPlace= ' route-places'
+                        }
+
                         const fontAwesomeIcon = L.divIcon({
-                        html: '<i class="fa ' + x.marker + '"></i>',
-                        iconSize: [40, 40],
-                        className: 'myDivIcon'
+                            html: '<i class="fa ' + x.marker + '"></i>',
+                            iconSize: [40, 40],
+                            className: 'myDivIcon' + currentPlace
                         });
                         
                         return(
