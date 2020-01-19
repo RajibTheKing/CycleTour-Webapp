@@ -36,7 +36,8 @@ class TourController extends Controller
 
         $spots = DB::table('tour_spots')
                     ->join('places', 'places.id', '=', 'tour_spots.place_id')
-                    ->select(DB::raw('tour_spots.*, places.*'))
+                    ->join('place_infomation', 'place_infomation.place_id', '=', 'places.id')
+                    ->select(DB::raw('tour_spots.*, places.*, place_infomation.*'))
                     ->where('tour_spots.tour_id', '=', $id)
                     ->orderBy('tour_spots.id','ASC')
                     ->get();

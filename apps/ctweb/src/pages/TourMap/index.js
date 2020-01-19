@@ -10,6 +10,7 @@ import CTMakers from './../../helpers/CTMakers'
 
 import { ClipLoader, DotLoader, BarLoader, PropagateLoader } from "react-spinners";
 import { css } from "@emotion/core";
+import Timeline from "./components/Timeline";
 
 const override = css`
   display: block;
@@ -67,6 +68,7 @@ class TourMap extends Component {
 				markers: markerData,
 				tour: data.tour,
 				places: data.places,
+				spots: data.spots,
 				lat: markerData[midSpot].lat,
 				lng: markerData[midSpot].lng,
 				loading: false,
@@ -152,6 +154,13 @@ class TourMap extends Component {
 								<li>Tour Duration: {tour.duration}</li>
 								<li>Highlights : {tour.major_spots}</li>
 							</ul>
+						</div>
+						<div className="clearfix">
+							<div className="timeline-item-wrap">
+								<h4>Route Places</h4>
+								<hr />
+							</div>
+							<Timeline spots={this.state.spots} />
 						</div>
 					</div>
 					<div className="col-lg-4">
