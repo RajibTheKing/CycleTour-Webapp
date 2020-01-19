@@ -41,9 +41,14 @@ class TourController extends Controller
                     ->orderBy('tour_spots.id','ASC')
                     ->get();
 
+        $places = DB::table('places')
+                    ->select(DB::raw('places.*'))
+                    ->get();
+
         return response()->json([
             'spots' => $spots,
             'tour' => Tour::find($id),
+            'places' => $places,
             'message' => 'Success'
         ], 200);
     }

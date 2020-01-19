@@ -6,6 +6,7 @@ import {areaData} from './../../helpers/areaData';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import Image from '../../helpers/Image'
+import CTMakers from './../../helpers/CTMakers'
 
 class Places extends Component {
   constructor() {
@@ -69,30 +70,9 @@ class Places extends Component {
               url="http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
             />
-            {
-              this.state.places &&
-              this.state.places.map((x,i) => {
-                const fontAwesomeIcon = L.divIcon({
-                  html: '<i class="fa ' + x.marker + '"></i>',
-                  iconSize: [40, 40],
-                  className: 'myDivIcon'
-                });
-                
-                return(
-                  <Marker
-                      position={[x.lat, x.lon]}
-                      icon={fontAwesomeIcon}
-                      onClick={this.onClickMaker.bind(this)}
-                    >
-                    <Popup>
-                      <p><strong>{x.title}</strong></p>
-                      <p>Website: { x.websites }</p>
-                      <Link to={'/place/' + x.id} >Details</Link>
-                    </Popup>
-                  </Marker>
-                )
-              })
-            }
+
+            <CTMakers places={this.state.places} />
+            
             <GeoJSON data={areaData} />
         </Map>
         <section className="py-6 bg-gray-100 place-list">

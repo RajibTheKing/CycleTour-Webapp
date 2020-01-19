@@ -6,6 +6,7 @@ import axios from 'axios'
 import Image from './../../helpers/Image'
 import Routing from "./components/Routing";
 import {areaData} from './../../helpers/areaData';
+import CTMakers from './../../helpers/CTMakers'
 
 class TourMap extends Component {
   constructor(props) {
@@ -26,14 +27,12 @@ class TourMap extends Component {
     
 		const url = ctKielApi.URL + '/tours/map/'+id
 		axios.get(url).then(response => response.data)
-		.then((data) => {
-			
-			console.log('Tour data' , data.spots);
-			
-			  const markerData = data.spots.map(x => { return {lat : x.lat, lng : x.lon}})  
+		.then((data) => {			
+			const markerData = data.spots.map(x => { return {lat : x.lat, lng : x.lon}})  
 			this.setState({
 				markers: markerData,
-				tour: data.tour
+				tour: data.tour,
+				places: data.places
 			})
 		}).catch(function (error) {
 			console.log(error);
@@ -86,6 +85,7 @@ class TourMap extends Component {
 				:''
 			}
 
+			<CTMakers places={this.state.places} target={true} />
 			<GeoJSON data={areaData} />
 		</Map>
 		<section className="py-6 bg-gray-100">
