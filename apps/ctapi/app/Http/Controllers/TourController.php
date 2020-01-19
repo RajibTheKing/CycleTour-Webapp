@@ -42,7 +42,8 @@ class TourController extends Controller
                     ->get();
 
         $places = DB::table('places')
-                    ->select(DB::raw('places.*'))
+                    ->join('place_infomation', 'place_infomation.place_id', '=', 'places.id')
+                    ->select(DB::raw('places.*, place_infomation.*'))
                     ->get();
 
         return response()->json([

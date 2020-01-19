@@ -89,7 +89,7 @@ class TourMap extends Component {
     console.log("Inside Render", this.state.markers);
     
     return (
-      <div className="clearfix">
+      <div className="clearfix tour-map-single">
         <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true}>
     
 			<TileLayer

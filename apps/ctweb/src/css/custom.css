@@ -137,6 +137,13 @@ section.place-list{
     color: #005A0A;
 }
 
+.tour-map-single .myDivIcon{
+    opacity: .9;
+}
+.tour-map-single .myDivIcon:hover{
+    opacity: 1;
+}
+
 .myDivIcon.route-places{
     color: #005A0A;
 }

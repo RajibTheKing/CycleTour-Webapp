@@ -34,6 +34,7 @@ class CTMakers extends Component{
                             >
                             <Popup>
                                 <p><strong>{x.title}</strong></p>
+                                <p>{x.address}</p>
                                 {
                                     target?
                                     <Link to={'/place/' + x.id}  target="_blank">Details</Link>
