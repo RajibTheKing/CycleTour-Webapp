@@ -19,7 +19,17 @@ class Routing extends MapLayer {
   }
 
   createLeafletElement() {
+
+    const routeMarker = L.icon({
+      iconUrl: '/images/checkpoint.png',
+      iconSize: [20, 20],
+    });
     
+    const cusTomIcon = L.icon({
+      iconUrl: '/images/bikeIconMarker.png',
+      iconSize: [25, 25],
+    });
+
     const {map, markers} = this.props;
     console.log("TheKing--> createLeafLetElement", markers);
 
@@ -27,7 +37,16 @@ class Routing extends MapLayer {
     markers.map(x => wapointList.push(L.latLng(x.lat, x.lng)));
     
     let leafletElement = new L.Routing.Control({
-			waypoints: wapointList,
+      waypoints: wapointList,
+      createMarker: function(i, point, n){
+        console.log("try to check ", point);
+
+        return L.marker(point.latLng, {
+               draggable: true,
+               bounceOnAdd: true,
+               icon: routeMarker
+          })},
+        
 			router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {
 				urlParameters: {
 				vehicle: 'bike'
@@ -42,6 +61,8 @@ class Routing extends MapLayer {
           }
         ]
       },
+      
+
       addWaypoints: true,
       draggableWaypoints: true,
       fitSelectedRoutes: false,
@@ -56,10 +77,7 @@ class Routing extends MapLayer {
       console.log('routing distance: ' + distance);
       console.log('look inside: ', e.routes);
 
-      var cusTomIcon = L.icon({
-        iconUrl: '/images/bikeIconMarker.png',
-        iconSize: [40, 40],
-      });
+      
 
       
 
