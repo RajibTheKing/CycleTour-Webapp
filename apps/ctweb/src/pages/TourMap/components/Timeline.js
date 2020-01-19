@@ -18,7 +18,7 @@ class Timeline extends Component{
                                         <div className="ct-tour-image-overlap">
                                             <div className="ct-tour-image-box">
                                                 <div className="ct-tour-image-box-inner">
-                                                    <i className={'fa ' + spot.marker }></i>
+                                                    <i className={ spot.marker }></i>
                                                 </div>
                                             </div>
                                         </div>

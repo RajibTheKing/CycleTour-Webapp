@@ -105,7 +105,7 @@ class PlaceMap extends Component {
 					var currentPlace= ' current-place'
 				}
                 const fontAwesomeIcon = L.divIcon({
-					html: '<i class="fa ' + x.marker + '"></i>',
+					html: '<i class="' + x.marker + '"></i>',
 					iconSize: [40, 40],
 					className: 'myDivIcon' + currentPlace
                 });
@@ -143,7 +143,7 @@ class PlaceMap extends Component {
 						<div className="place-information">
 							<h4>{place.title}</h4>
 							<p>{place.description}</p>
-							<p>Type: <i className={'fa '+ place.marker}></i></p>
+							<p>Type: <i className={place.marker}></i></p>
 							{
 								place.websites && place.websites !== 'None' &&
 								<p>Website: <a href={place.websites} target="_blank">{place.websites}</a></p>

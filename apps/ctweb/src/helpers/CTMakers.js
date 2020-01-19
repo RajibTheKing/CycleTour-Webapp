@@ -22,7 +22,7 @@ class CTMakers extends Component{
                         }
 
                         const fontAwesomeIcon = L.divIcon({
-                            html: '<i class="fa ' + x.marker + '"></i>',
+                            html: '<i class="' + x.marker + '"></i>',
                             iconSize: [40, 40],
                             className: 'myDivIcon' + currentPlace
                         });
