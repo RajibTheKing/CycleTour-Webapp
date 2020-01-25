@@ -11,7 +11,9 @@ class Timeline extends Component{
                <div className="tour-timeline">
                    {
                        spots.map((spot,index) => {
+                           const link = '/place/'+spot.id
                            return(
+                            <Link to={link} target="_blank">
                             <div key={index} className="timeline-item">
                                 <div className="ct-tour-media">
                                     <div className="ct-tour-img">
@@ -29,13 +31,14 @@ class Timeline extends Component{
                                                 <img src={"/images/places/"+ spot.images} className="img-fluid" />
                                                 <div className="ct-tour-place-text">
                                                     <h4 className="ct-tour-place-title">{ spot.title }</h4>
-                                                    <p>Address: <a herf="#">{ spot.address }</a></p>
+                                                    <p>Addressoioioio: <a herf="#">{ spot.address }</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                            )
                        })
                    }

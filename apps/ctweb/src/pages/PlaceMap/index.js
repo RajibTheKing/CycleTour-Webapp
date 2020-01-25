@@ -143,7 +143,7 @@ class PlaceMap extends Component {
 						<div className="place-information">
 							<h4>{place.title}</h4>
 							<p>{place.description}</p>
-							<p>Type: <i className={place.marker}></i></p>
+							<p>Type: <b>{place.type}</b></p>
 							{
 								place.websites && place.websites !== 'None' &&
 								<p>Website: <a href={place.websites} target="_blank">{place.websites}</a></p>
