@@ -4,6 +4,7 @@ import "leaflet-routing-machine";
 import "lrm-graphhopper"
 import { withLeaflet } from "react-leaflet";
 import "./MovingMarker"
+import ctKielApi from "./../../../helpers/ctKielApi"
 
 
 class Routing extends MapLayer {
@@ -35,6 +36,8 @@ class Routing extends MapLayer {
 
     let wapointList = [];
     markers.map(x => wapointList.push(L.latLng(x.lat, x.lng)));
+
+    var myMovingMarker = undefined;
     
     let leafletElement = new L.Routing.Control({
       waypoints: wapointList,
@@ -46,7 +49,7 @@ class Routing extends MapLayer {
                icon: routeMarker
           })},
         
-			router: new L.Routing.GraphHopper( 'f60ff2c2-e959-4826-a351-dfea1ba2b23b' , {
+			router: new L.Routing.GraphHopper( ctKielApi.graphHopperKey , {
 				urlParameters: {
 				vehicle: 'bike'
 				}
@@ -80,17 +83,24 @@ class Routing extends MapLayer {
 
       
 
+      if(myMovingMarker && myMovingMarker.isRunning())
+      {
+         //do nothing
+      }
+      else{
 
+        myMovingMarker = L.Marker.movingMarker([wapointList[0],wapointList[0]],[1], {icon: cusTomIcon});
+        e.routes[0].coordinates.map(x =>{ myMovingMarker.addLatLng(x, [50]); });
+        myMovingMarker.addTo(map.leafletElement);
 
-      var myMovingMarker = L.Marker.movingMarker([wapointList[0],wapointList[0]],[1], {icon: cusTomIcon});
-      e.routes[0].coordinates.map(x =>{ myMovingMarker.addLatLng(x, [50]); });
-      myMovingMarker.addTo(map.leafletElement);
+        
+        
+        //var myMovingMarker2 = L.Marker.movingMarker([wapointList[1],wapointList[2]],[20000]).addTo(map.leafletElement);
+
+        myMovingMarker.start();
+      }
 
       
-      
-      //var myMovingMarker2 = L.Marker.movingMarker([wapointList[1],wapointList[2]],[20000]).addTo(map.leafletElement);
-
-      myMovingMarker.start();
       
     });
 

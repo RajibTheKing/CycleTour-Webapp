@@ -3,6 +3,7 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import "lrm-graphhopper"
 import { withLeaflet } from "react-leaflet";
+import ctKielApi from "./../../../helpers/ctKielApi"
 
 class Routing extends MapLayer {
 
@@ -26,7 +27,7 @@ class Routing extends MapLayer {
     
     let leafletElement = new L.Routing.Control({
 			waypoints: wapointList,
-			router: new L.Routing.GraphHopper( 'f60ff2c2-e959-4826-a351-dfea1ba2b23b' , {
+			router: new L.Routing.GraphHopper( ctKielApi.graphHopperKey , {
 				urlParameters: {
 				vehicle: 'bike'
 				}
