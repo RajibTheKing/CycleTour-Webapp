@@ -83,7 +83,7 @@ class Places extends Component {
             loading={this.state.loading}
           />
 
-        <Map center={position} className="place-maps" zoom={zoom}>
+        <Map center={position} className="place-maps" zoom={zoom} minZoom={10} maxZoom={30}>
             <TileLayer
               url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'

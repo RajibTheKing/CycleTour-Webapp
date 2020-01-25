@@ -114,7 +114,7 @@ class TourMap extends Component {
             color={"#123abc"}
             loading={this.state.loading}
           />
-        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true}>
+        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true} minZoom={10} maxZoom={30}>
     
 			<TileLayer
 				url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
