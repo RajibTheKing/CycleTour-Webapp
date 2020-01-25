@@ -26,7 +26,7 @@ class Routing extends MapLayer {
     
     let leafletElement = new L.Routing.Control({
 			waypoints: wapointList,
-			router: new L.Routing.GraphHopper( '42ba18ee-a255-4fc3-b945-2cec9410907f' , {
+			router: new L.Routing.GraphHopper( 'f60ff2c2-e959-4826-a351-dfea1ba2b23b' , {
 				urlParameters: {
 				vehicle: 'bike'
 				}
