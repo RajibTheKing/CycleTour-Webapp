@@ -7,6 +7,7 @@ import Image from './../../helpers/Image'
 import Routing from "./components/Routing";
 import {areaData} from './../../helpers/areaData';
 import CTMakers from './../../helpers/CTMakers'
+import {Link} from 'react-router-dom'
 
 import { ClipLoader, DotLoader, BarLoader, PropagateLoader } from "react-spinners";
 import { css } from "@emotion/core";
@@ -103,8 +104,8 @@ class TourMap extends Component {
 
   render() {
     const { lat, lng, zoom, tour } = this.state;
-    const position = [lat, lng];
-    console.log("Inside Render", this.state.markers);
+	const position = [lat, lng];
+	const { id } =  this.props.match.params
     
     return (
       <div className="clearfix tour-map-single">
@@ -114,7 +115,7 @@ class TourMap extends Component {
             color={"#123abc"}
             loading={this.state.loading}
           />
-        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true} minZoom={10} maxZoom={30}>
+        <Map center={position} zoom={zoom} ref={this.saveMap} scrollWheelZoom={true}>
     
 			<TileLayer
 				url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
@@ -141,7 +142,13 @@ class TourMap extends Component {
 						tour &&
 						<h2 className="mb-5">{tour.title}</h2>
 					}
+					{
+					id == 2 &&
+					<a href="/images/tours/tour2_printable.pdf" target="_blank"><strong>Print this map</strong></a>
+							
+					}
 				</div>
+				
 				{
 				tour &&
 				<div className="row justify-content-md-center">
