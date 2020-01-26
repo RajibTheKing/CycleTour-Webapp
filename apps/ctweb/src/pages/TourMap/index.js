@@ -147,6 +147,11 @@ class TourMap extends Component {
 					<a href="/images/tours/tour2_printable.pdf" target="_blank"><strong>Print this map</strong></a>
 							
 					}
+					{
+					id == 1 &&
+					<a href="/images/tours/tour1_printable.pdf" target="_blank"><strong>Print this map</strong></a>
+							
+					}
 				</div>
 				
 				{
