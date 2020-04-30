@@ -9,7 +9,7 @@
     "eslint-loader": "^3.0.3",
     "fibers": "^4.0.2",
     "globalize": "^1.4.2",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "leaflet": "^1.6.0",
     "leaflet-control-geocoder": "^1.10.0",
     "leaflet-routing-machine": "^3.2.12",
