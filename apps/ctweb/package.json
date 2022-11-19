@@ -26,7 +26,7 @@
     "react-leaflet": "^2.6.1",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.3.0",
+    "react-scripts": "^5.0.1",
     "react-spinners": "^0.8.0",
     "react-widgets": "^4.4.11",
     "react-widgets-globalize": "^5.0.20",
